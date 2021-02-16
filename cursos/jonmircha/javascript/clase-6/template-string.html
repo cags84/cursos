@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template String</title>
+</head>
+<body>
+    <h1>Template String</h1>
+    <p>La concatenación  y la interpolación, son tema que se pueden hacer con los strings.</p>
+
+    <p>En JavaScript la concatenaciçon se logra con el signo (+), que sirve para unir dos o más valores.</p>
+
+    <p>La interpolación, es meter dentro de una cadena de texto, el valor dinamicamente de una variable, se hace con el backtip `${nombre_variable}`.</p>
+
+    <h2>Ejemplo</h2>
+    <ul>
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+    </ul>
+
+    <script>
+        console.log("Tema: Template String");
+
+        // Contatenación
+        let nombre = "Carlos";
+        let apellido = "Guzmán";
+
+        let saludo = nombre + " " + apellido;
+
+        console.log(saludo);
+
+        // Interpolación de variables (`) backtip
+        let saludo2 = `Hola mi nombre es ${nombre} ${apellido}`;
+        console.log(saludo2);
+
+        let ul = `
+            <ul>
+                <li>Primavera</li>
+                <li>Verano</li>
+                <li>Otoño</li>
+                <li>Invierno</li>
+            </ul>
+        `;
+
+        console.log(ul);
+
+    </script>
+</body>
+</html>

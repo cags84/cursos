@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined - NULL - NaN</title>
+</head>
+<body>
+    <h1>Undefined - NULL - NaN</h1>
+    <p>Son casos muy particulares de JavaScript, undefided y null van a representar un valor ausente, es decir una variable que no tiene valor, pero la gran diferencia es que undifined es un variable que no ha sido inicializada, null se trata de un valor que nosotros seteamos intencionalmente.</p>
+
+    <p>Undefined, JavaScript detecta que no tiene valor y la declara como undefided, mientras que null nosotros le asignamos ese tipo de valor.</p>
+
+    <p>NaN -> Not a Number, JavaScript nos va a decir cuando nosotros asignemos o hagamos operaciones donde unos de los operandos no sea número.</p>
+
+    <script>
+        console.log("Tema: Undefined - NULL - NaN");
+        
+        let indefinida;
+        console.log();
+        console.log(typeof indefinida); // Undefined
+        console.log(indefinida);
+
+        let nula = null; // null.
+        console.log();
+        console.log(typeof nula);
+        console.log(nula);
+
+        // Nan -> Not a Number
+        let notANumber = "hola" * 3.7;
+        console.log(notANumber); // NaN
+
+    </script>
+</body>
+</html>

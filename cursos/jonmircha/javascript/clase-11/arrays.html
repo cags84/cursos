@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Tipo de dato: Arrays</h1>
+    <p>Un arreglo es una colección de elementos, que no necesariamente deben ser del mismo tipo.</p>
+    <p>Se utilizan los corchetes [], para definir un array o podemos hacerlo con.</p>
+    <p>El primer elemento del arreglo, empieza en la posición 0.</p>
+
+    <script>
+        console.log("Tema: Arrays");
+
+        const arreglos = []; // Arreglo vacio
+        console.log(arreglos);
+        let e = new Array(1, 2, 3); // Forma con el constructor
+        console.log(e);
+
+
+        const arreglo_1 = [1, 2, 'a', 'b', ['I', 'II', [1, 2, 3]]];
+        console.log(arreglo_1);
+        console.log(arreglo_1.length);
+
+        // Se accede a la referencia del valor.
+        console.log(arreglo_1[2]); // Imprime a
+        console.log(arreglo_1[4][1]); // Imprime II
+        console.log(arreglo_1[4][2][0]); // Imprime 1
+
+        // Crear un arreglo con Array.of
+        const c = Array.of("X", "Y", "Z"); 
+        console.log(c);
+
+        // Crear un arreglo e inicializar todos sus valores a un valor dado
+        const d = Array(100).fill(false);
+        console.log(d); // Array(100), crea un array de 100 posiciones y con fill(false), inicializamos todos los datos con el valor false.
+
+        const f = new Array(); // Forma tradicional, pero no se usa
+        console.log(f); // Array vacío
+
+        const colores = ["Rojo", "Verde", "Azul"];
+        console.log(colores);
+
+        // Agregar un elemento al array
+        colores.push("Negro");
+        console.log(colores); // Siempre lo coloca al final
+
+        // Quitar el último elemento del array
+        colores.pop();
+        console.log(colores); // Quita el último elemento
+
+        // Ejecutar una función por cada uno de los elementos que tenga el arreglo.
+        // el -> hace referencia al elemento que esta recorriendo en ese momento el arreglo.
+        // index -> hace refencia al indice en el arreglo del elemento que este recorriendo.
+        colores.forEach(function (el, index) {
+            console.log(`<li id="${index}">${el}</li>`);
+        });
+
+    </script>
+</body>
+</html>

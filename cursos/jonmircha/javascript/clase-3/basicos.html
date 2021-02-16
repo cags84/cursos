@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamendos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <p>Una variable en JavaScript es un lugar en la memoria de nuestro PC para almacenar datos y poder reutilizarlos despues.</p>
+
+    <script>
+        // Como se declara una variable en JavaScript
+
+        // Concepto hoisting, sube la variable al top del documento.
+        console.log();
+        console.log('-----var------');
+        var hola = "Hola Mundo";
+        console.log(hola);
+
+        // Las variables tiene un scope, antes de ES6 JavaScript tenian el scope global y uno funcional.
+        // Ahora el ambito de las variables es por bloque.
+
+        if(true) {
+            // Esto es un bloque
+            var a = 3;
+            console.log(a);
+        }
+
+        a = 5; // Por esto se genera el problema, no se debería permitir.
+        console.log(a);
+
+
+        // Con ES6, ya se tiene ambitos de bloque.
+
+        if(true) {
+            let ambitoLocal = 'Ambito local';
+            console.log(ambitoLocal);
+        }
+        // console.log(ambitoLocal); // Esto daría problema Uncaught ReferenceError: ambitoLocal is not defined
+
+        console.log(window);
+
+        // Todas las variables que se declaran con var, se va a quedar en el scope global del documento, mientras las variables declaradas con let, porque let solo permite que la variable exista en el bloque donde fue declarada.
+
+
+        // con let.
+
+        let variable = "texto";
+        console.log();
+        console.log('-----let------');
+        console.log(variable)
+        {
+            let variable = "cambia la variable a scope local";
+            console.log(variable);
+        }
+        console.log(variable);
+
+        // Si se crea una variable con var se declara con el objeto windows, pero si se declara con let no se crea.
+
+        // En los navegadores el objeto global es 'windows'.
+        // En node del lado del servidor el objeto global es 'global'.
+
+    </script>
+
+</body>
+</html>

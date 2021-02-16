@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constantes</title>
+</head>
+<body>
+    
+    <h1>Constantes</h1>
+    <p>const, es la forma que tenemos en ES6 para declarar constantes.</p>
+    <p>const nos permite crear variables, que nosotros sepamos que no van a cambiar su valor, durante el flujo de nuestra aplicación.</p>
+    <p>No se pueden tener constantes <em>VACIAS</em>.</p>
+    <p>Es un valor constante, no se puede redeclarar o modificar.</p>
+
+    <p>A tener en cuenta, con los valores primitivos - no se pueden modificar el valor con el cual se inicializa, pero con los valores compuestos, no puede cambiar el nombre con el que se declaro, pero si el contenido de él, como lo vemos en el ejemplo.</p>
+
+    <h2>Ejemplo</h2>
+
+    <code>
+        <pre>
+        const PI = 3.141618;
+        const NUEVE = 9;
+
+        console.log(PI);
+        console.log(NUEVE);
+
+        // Valores compuestos
+        const arreglo = {
+            nombre: "Carlos"
+        };
+
+        console.log(arreglo.nombre);
+
+        arreglo.nombre = "Otro nombre";
+        console.log(arreglo.nombre)
+        </pre>
+    </code>
+
+    <script>
+        const PI = 3.141618;
+        const NUEVE = 9;
+
+        console.log(PI);
+        console.log(NUEVE);
+
+        // Valores compuestos
+        const arreglo = {
+            nombre: "Carlos"
+        };
+
+        console.log(arreglo.nombre);
+
+        arreglo.nombre = "Otro nombre";
+        console.log(arreglo.nombre)
+    </script>
+
+</body>
+</html>

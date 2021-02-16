@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <h1>Funciones</h1>
+    <p>Son bloques de código autocontenido, independiente al scope o ambito global, que se va a definir una sola vez y que se va ejecutar cuantas veces como sea necesaria, puede recibir o no parametros y puede devolver o no resultado.</p>
+
+    <p>Las funciones en JavaScript son un objeto, son un tipo de dato muy especial, se les considera "ciudadanos de primera clase", puedes asignarla, puede retornar otra funcion, son muy poderosa desde ES6, como por ejemplo arrow function (funciones de flecha).</p>
+
+
+    <h2>Funcion declaradas vs expresadas</h2>
+
+    <p>El orden en el que se declaran las funciones tienen relevancía dado que, las funciones declaradas pueden invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada, lo primero que hace JavaScript es variables y despues funciones.</p>
+
+    <p>Las funciones expresada deben ser declaradas antes de mandarlas a llamar.</p>
+
+    <script>
+        console.log("Tema: Funciones");
+
+        // Funciones declaradas y expresadas.
+
+        /* FUNCTIONES DECLARADAS */
+        function nombreFuncion(parametro1 = 0, parametro2 = 0) {
+            // Bloque de la funcion, scope de la funcion
+            // podemos declarar variable
+            let resultado = 0;
+            // realizar operaciones
+            resultado = parseFloat(parametro1) + parseFloat(parametro2);
+            return resultado.toFixed(2); // Para devolver el resultado requerido a quien llamo a la funcion, puede devolver cualquier tipo de dato puede ser primitivo o compuesto.
+        }
+
+        // Llamamos a la funcion, invoke functions, los parentesis indican que una función se va a ejecutar.
+        console.log(nombreFuncion(3, 6.36)); // Devulve 9.36
+        console.log(nombreFuncion()); // Devulve 0.00
+
+        /* FUNCIONES EXPRESADAS */
+
+        // Crear una funcíón y asignarla a una variables.
+        // Se conoce tambien como una función anonima.
+        const funcionExpresada = function() {
+            let variableDentroDeFuncion = 10;
+            return 'Hola esta es una funcion declarada ' + variableDentroDeFuncion;
+        };
+
+        console.log(funcionExpresada());
+
+    </script>
+</body>
+</html>

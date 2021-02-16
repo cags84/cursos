@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+    <p>Se dice que en JavaScript todo es un objeto.</p>
+
+    <script>
+        console.log("Temas: Objetos");
+
+        let a = new String(); // Como se hacia antes
+        console.log(a);
+
+        const b = {};
+        console.log(b);
+
+        // Objeto
+        // Los objetos pueden contener de todo, un objeto puede contener metodos u otros objetos.
+        const carlos = {
+            nombre: "Carlos",
+            apellido: "Guzmán",
+            edad: 37,
+            pasatiempo: ["Jugar", "Programar"],
+            soltero: false,
+            contacto: {
+                email: "cags84@gmail.com",
+                twitter: "@cguzman84",
+                movil: "5731333332434"
+            },
+            saludar: function() { // Puedo declarar functiones
+                return ":)";
+            },
+            decirMiNombre: function() {
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter} en twitter.`);
+            }
+        };
+
+        //console.log(carlos); // Me debe devolver el objeto
+
+        /* Para acceder a los valores de un objeto */
+        console.log(carlos['nombre']);
+        console.log(carlos.nombre);
+
+        console.log(carlos.contacto.email);
+        console.log(carlos['contacto']['email']);
+
+        console.log(carlos.saludar());
+
+        // Dentro de un objeto las variables se le van a llamar atritubos/propiedades y las funciones se les llama metodos.
+
+        carlos.decirMiNombre();
+
+        // La palabra this -> hace referencia en el contexto donde nos encontramos, en este caso es el objeto en si, osea, hace referencia al mismo objeto.
+
+        /* METODOS */
+        console.log(Object.keys(carlos)); // Lista todas las llaves del objeto.
+        console.log(Object.values(carlos)); // Me da los valores.
+        console.log(carlos.hasOwnProperty("nombre")); // Pregunta si tiene la propiedad nombre, que es true.
+        console.log(carlos.hasOwnProperty("segundoApellido")); // false
+
+    </script>
+</body>
+</html>

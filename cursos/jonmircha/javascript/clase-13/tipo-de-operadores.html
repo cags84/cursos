@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de operaciones</title>
+</head>
+<body>
+    <h1>Tipo de operaciones</h1>
+    <p>Existe un orden de operadores como se hace en la matemática, que se le llama precedencia</p>
+
+    <script>
+        console.log("Tema: Tipo de operadores");
+
+        // Tipo de operadores
+        // Aritméticos +, -, *, /, %, ()
+        // Existe un orden de operadores como se hace en la matemática, que se le llama precedencia
+        let a = 5 + 5;
+        console.log(a);
+
+        // Relacionales
+        // >, <, >=, <=, ==, ===, !=, !==
+        console.log(8 > 9); // false
+        console.log(9 > 8); // true
+        console.log(8 >= 9); // false
+        console.log(8 <= 9); // true
+
+        /*
+            =, igual es asignación de variable.
+            ==, iguales es comparación de valores.
+            ===, iguales es comparación, pero también de tipo de dato.
+        */
+
+        console.log(1 === "1"); // La mejor practica es validar con ===
+        console.log(0 === false); // devuelve false.
+
+        // Incremento y Decremento
+        // capacidad que tiene una variable para controlar mi flujo.
+        let i = 0;
+        console.log(i++); // 0
+        console.log(i++); // 1
+        console.log(i++); // 2
+        console.log(i++); // 3
+        console.log(i++); // 4
+        console.log(i++); // 5
+        console.log(i--); // 6
+        console.log(i--); // 5
+        console.log(i--); // 4
+        console.log(i--); // 3
+        console.log(i--); // 2
+        console.log(i--); // 1
+
+        // Operador unario 
+        let i1 = 1;
+        i1++; // 2
+
+        // Pre-incremento y Pre-decremento
+        ++i1;
+        --i1;
+
+        // La diferencia entre uno y el otro, es que el pre-incremento aumenta y después imprime, el el post-incremento primero imprime y aumenta.
+
+        // La mejor práctica es no utilizar el pre y post incremento.
+
+        /* Operadores lógicos 
+            !  - Not -> Niega lo que le pasemos.
+            || - Or -> Al menos una debe ser true para que la condición sea true.
+            && - And -> Para ser true las dos condiciones deben ser true, todo el resto es false.
+        */
+
+        // OR
+        console.log(9 === 9 || "9" === 9); // True, dado que la primera condición es verdadera.
+        // AND -> todas tienen que cumplirse, es decir ser verdaderas para que and se cumpla.
+        console.log(9 === 9 && "9" === 9); // False, porque las dos condiciones no son True.
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <h1>Condicionales</h1>
+    <p>Una estructura de control es aquel mecanísmo que permite controlar el flujo de tu programación.</p>
+
+    <script>
+        console.log("Tema: Condicionales");
+
+        /* Condicionales*/
+
+        // if - else
+        let edad = 37;
+
+        if(edad >= 18) {
+            console.log('Eres mayor de edad');
+        } else {
+            console.log('Eres menor de edad');
+        }
+
+        // if - elseif - else
+        // días 06hrs-11hrs
+        // tardes 12hrs - 18hrs
+        // noche  19hrs - 23hrs
+        // dejame dormir 0hrs - 5hrs
+        let hora = 17;
+        if(hora >= 6 && hora <= 11) {
+            console.log("Buenos días");
+        } else if(hora >= 12 && hora <= 18) {
+            console.log("Buenos tardes");
+        } else if(hora >= 18 && hora <= 23) {
+            console.log("Buenos noches");
+        } else {
+            console.log("Dejame dormir");
+        }
+
+        // Operador ternario, tiene 3 partes
+        // (condición) ? verdadero : falsa; // Solo se puede ejecutar una opción.
+        console.log();
+        (edad >= 18) 
+            ? console.log("Eres mayor de edad") 
+            : console.log("Eres menor de edad");
+
+        /* Estructura switch - case */
+        // Cuando tengamos que evaluar diferentes valores para una misma variable.
+        /*
+            domingo - 0
+            lunes - 1
+            martes - 2
+            miércoles -3
+            jueves - 4
+            viernes - 5
+            sábado - 6
+        */
+
+        let dia = 12;
+
+        switch(dia) {
+            case 0:
+                console.log('Domingo');
+                break;
+            case 1:
+                console.log('Lunes');
+                break;
+            case 2:
+                console.log('Martes');
+                break;
+            case 3:
+                console.log('Miércoles');
+                break;
+            case 4:
+                console.log('Jueves');
+                break;
+            case 5:
+                console.log('Viernes');
+                break;
+            case 6:
+                console.log('Sábado');
+                break
+            default:
+                console.warn('Valor inesperado');
+                break;
+        }
+
+    </script>
+    
+</body>
+</html>

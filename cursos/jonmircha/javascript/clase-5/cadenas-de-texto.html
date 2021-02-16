@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadena de texto</title>
+</head>
+<body>
+    <h1>Cadena de texto</h1>
+    <p>En JavaScript todo es un objeto, hasta los tipos de datos más primitivos, tambien son objetos.</p>
+
+    <script>
+        // Cadena de texto, Strings
+        console.log('Tema: cadena de texto');
+
+        let nombre = "Carlos";
+        let apellido = "Guzmán";
+        let saludo = new String("Hola mundo"); // Declaración muy formal casi nadie la utiliza
+        
+        console.log(nombre, apellido, saludo);
+        console.log(nombre.length);
+        console.log(apellido.length);
+        console.log(saludo.length);
+
+        // Metodos de los String
+        console.log(nombre.toUpperCase());
+        console.log(apellido.toLowerCase());
+
+        let lorem = "  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+
+        console.log(lorem.includes("Ipsum")); // Busca si existe el párametro
+        console.log(lorem.includes("carlos"));
+        console.log(lorem.trim(lorem)); // Elimina lo espacio en blando a la derecha e izquierda
+
+        console.log(lorem.split(" ")); // Separa por espacios en blanco
+        console.log(lorem.split(",")); // Separa con la coma (,)
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <h1>Loop</h1>
+    <p>Ciclos, bucles o estructuras repetitivas, la idea es que se repita hasta que una condición dada se cumpla, entra en juego el incremento y decremento como concepto.</p>
+
+    <p>while y do-while, son estructuras repetitivas más de tipo declarativa, la diferencia entre ellas es que el do while, al menos ejecuta una vez y comprueba la condición, en cambio el while si no cumple la condición no ingresa al bloque del while.</p>
+
+    <script>
+        console.log("Tema: Loops");
+
+        // Loop
+        // while, do-while, for.
+
+        // while, do-while es una estructura más declarativa.
+        let contador = 0;
+
+        while(contador < 100) {
+            console.log(contador);
+            contador++;
+        }
+
+        contador = 0;
+
+        do {
+            console.log(contador);
+            contador++;
+        } while(contador < 50)
+
+        // for es una estrucura repetitiva
+        let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        for(let i=0, count = numeros.length; i < count; i++) {
+            console.log(numeros[i]);
+        }
+
+        // for - in
+        // Me permite recorrer o iterar las propidades de un objeto.
+        // Variante de un ciclo for, que me permite recorrer los elementos de un objeto.
+
+        const objeto = {
+            nombre: "Carlos",
+            apellido: "Guzmán",
+            edad: 37
+        };
+
+        for (const propiedad in objeto) {
+            console.log(`Key: ${propiedad}, value: ${objeto[propiedad]}`);
+            
+            /*
+            if (Object.hasOwnProperty.call(object, key)) {
+                const element = object[key];
+                
+            }*/
+        }
+
+        // for - of
+        // forof me permite recorrer todos los elementos que sean iterables en JavaScript
+
+        for (const elemento of numeros) {
+            console.log(elemento);
+        }
+
+        let cadena = "Esta es una cadena de texto";
+
+        for (const caracter of cadena) {
+            console.log(caracter);
+        }
+
+    </script>
+</body>
+</html>

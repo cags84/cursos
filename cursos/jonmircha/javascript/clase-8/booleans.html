@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+</head>
+<body>
+    <h1>Booleans</h1>
+    <p>Se utilizan para evaluar, los valores pueden tender a true o a falso, puede revisar esto en el siguiente <a href="https://developer.mozilla.org/es/docs/Glossary/Truthy"></a>link</p>
+
+    <p>Tienden a true</p>
+    <pre>
+        <code>
+            if (true)
+            if ({})
+            if ([])
+            if (42)
+            if ("foo")
+            if (new Date())
+            if (-42)
+            if (3.14)
+            if (-3.14)
+            if (Infinity)
+            if (-Infinity)
+        </code>
+    </pre>
+
+    <p>Tienden a false</p>
+    <pre>
+        <code>
+            if (false)
+            if (null)
+            if (undefined)
+            if (0)
+            if (-0)
+            if (0n)
+            if (NaN)
+            if ("")
+        </code>
+    </pre>
+
+    <script>
+        console.log("Tema: Booleans");
+
+        let verdadero = true;
+        let falso = false;
+        // Podemos crear con el constructor
+        let v = new Boolean(true);
+
+        console.log(verdadero, falso);
+        console.log(typeof verdadero);
+        console.log(typeof falso);
+
+        console.log(Boolean(0)); // Da como resultado falso
+        console.log(Boolean("")); // Da como resultado falso
+
+        console.log(Boolean("Cualquier dato")); // Da como resultado true
+        console.log(Boolean(-7)); // Da como resultado true
+        console.log(Boolean(7)); // Da como resultado true
+
+    </script>
+
+</body>
+</html>
