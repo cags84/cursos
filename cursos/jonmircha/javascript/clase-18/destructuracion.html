@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructuración</title>
+</head>
+<body>
+  <h1>Destructuración</h1>
+  <p>Es una forma de asignar valores arreglos y objetos, en librerias del frontend se utiliza mucho.</p>
+
+  <p>Para que las destructuración funcione, la variable que trato de crear se llame igual a la propiedad que quiero que tome el valor.</p>
+
+  <script>
+    console.log("Tema: Destructuración.");
+
+    // Con los arreglos
+    const numeros = [1, 2, 3];
+    /*
+    let uno = numeros[0];
+    let dos = numeros[1];
+    let tres = numeros[2];
+    .....
+    console.log(uno, dos, tres);
+    */
+
+    // Utilizando la destructuración
+    console.log('');
+    const [one, two, three] = numeros;
+    console.log(one);
+    console.log(two);
+    console.log(three);
+
+    const persona = {
+      nombre: "Carlos",
+      apellido: "Guzmán",
+      edad: 37
+    };
+
+    const {nombre, apellido, edad} = persona;
+    console.log('');
+    console.log(nombre);
+    console.log(apellido);
+    console.log(edad);
+    console.log('');
+
+
+
+
+  </script>
+</body>
+</html>
