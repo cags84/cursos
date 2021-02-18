@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de errores</title>
+</head>
+<body>
+  <h1>Manejo de errores</h1>
+  <p>try ... catch .. finally, es bloque de código que nos permite evaluar si pasa un error y nos da la posibilidad de ejecutar condiciones si existen errores.</p>
+
+  <p>Cuando el try-catch, detecta un error no continua ejecutando la siguiente línea.</p>
+
+  <script>
+    console.log("Tema: Manejo de errores.");
+
+    // try .. catch -- finally
+    try {
+      console.log("En el try se agrega el código a evaluar");
+      noExiste;
+      console.log("Segundo mensaje en el try");
+    } catch (error) {
+      console.log("catch, catpura cualquier error surgido o lanzado en el try.");
+      console.error(error);
+    } finally {
+      console.log("finally, se ejecuta siempre al final de un bloque try-catch.");
+    }
+
+    // Personalizar nuestros mensajes
+    console.log();
+    console.log();
+    try {
+      let numero = 'y';
+      if(isNaN(numero)) {
+        throw new Error("El carácter introducido no es un número.");
+      }
+    } catch (error) {
+      console.error("Se produjo el siguiente error: " + error);
+    }
+
+  </script>
+
+</body>
+</html>
