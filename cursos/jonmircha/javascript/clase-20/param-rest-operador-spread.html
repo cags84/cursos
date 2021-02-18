@@ -8,10 +8,35 @@
 </head>
 <body>
   <h1>Parametros REST & Operador Spread</h1>
-  <p></p>
+  <p>Pamámetros REST es una forma de virtualmente ir agregando parámetros infinitos, ya sea a una función o dentro de una variable, imaginate que tienes un arreglo pero no sabes cuantos parámetros vas a recibir y posteriormente con esos valores vas hacer ciertar operaciones, se declara con tres puntos (...), antes de la variable donde van hacer guardados.</p>
 
   <script>
     console.log("Tema: Parametros REST & Operador Spread");
+
+    /* PARAMETROS REST */
+    function sumar(a, b, ...nums) {
+      let resultado = a + b;
+      nums.forEach(function(num) {
+        resultado += num;
+      });
+      return resultado;
+    }
+    console.log(sumar(1,2,3,4,5,6,7,8,9));
+
+    /* PARAMETROS SPREAD */
+    // Operador de propagación
+
+    const arr1 = [1, 2, 3, 4, 5];
+    const arr2 = [5, 6, 7, 8, 9];
+
+    console.log(arr1, arr2);
+
+    // Crear un arreglo 3, a parir de los dos elementos anteriores.
+    const arr3 = [arr1, arr2];
+    console.log(arr3); // No era lo que queria
+
+    // con spread operator
+    const arr4 = [...arr1, ...arr2];
 
     
   </script>
