@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow functions</title>
+</head>
+<body>
+  <h1>Arrow functions</h1>
+  <p>Es una implementación que vino a mejorar, es la manera que escribimos o expresamos nuestro código, es una nueva forma de definir funciones anonimas, que sean expresadas.</p>
+
+  <p>Los arrow function, tienen un contexto de los parametros que se la pasan como argumentos, estos se pueden acceder con la palabra reservada <em>this</em>.</p>
+
+  <script>
+    console.log("Tema: Arrow functions");
+
+    const saludo = function() {
+      console.log("Funcion expresada") // es diferente a una funcion declarada. "hoisting".
+    };
+
+    saludo();
+
+    console.log('');
+    // Forma de declarar con arrow function, se pueden omitir las llaves si solo tengo una sola línea de código.
+    const saludarDos = () => {
+      return "Estamos dentro un arrow function";
+    };
+    const saludarTres = () => console.log("Estamos dentro un arrow function");
+    console.log(saludarDos());
+
+    // Arrow functions con parametros
+    // Importante:
+    //  -> Cuando una funcion flecha no recibe parametros, se deben poner los parentesis, si recibe al menos un parametro, no necesita los parametros. 
+    //  -> 
+    let nombre = "Carlos Guzmán";
+    const saludaConParametros = (nombre) => {
+      return `Hola ${nombre}`;
+    };
+    console.log(saludaConParametros(nombre));
+
+    const sumar = (a, b) => {
+      return a + b;
+    };
+    console.log('');
+    console.log(sumar(8, 9));
+
+    const sumarFuncional = (a, b) => a + b;
+    console.log('');
+    console.log(sumarFuncional(8, 9));
+
+    // Para iterar
+    console.log('');
+    console.log('Sin arrow function');
+    const numeros = [1, 2, 3, 4, 5];
+    numeros.forEach(function(numero, index) {
+      console.log(`El elemento ${numero} esta en la posición ${index}`);
+    });
+
+    // Con arrow function
+    console.log('');
+    console.log('Con arrow function');
+    numeros.forEach((numero, index) => console.log(`El elemento ${numero} esta en la posición ${index}`));
+    
+    /* CONTEXTO DE LOS ARROW FUCNTION (this) */
+
+    function perro() {
+      console.log(this);
+    }
+
+    perro();
+
+    const perro1 = {
+      nombre: 'Dona',
+      edad: 1,
+      ladrar: function() {
+        console.log(this); // Aquì this hace referencia directamente a el objeto perro1
+        console.log(this.nombre);
+      }
+    }
+    perro1.ladrar();
+
+
+    // Al colocar una function arrow function dentro de un objeto, el objeto this dentro de la funtion ahora es el objeto windows.
+
+    let variablePorFuera = "Variable por fuera";
+
+    const perro2 = {
+      nombre: 'Dona',
+      edad: 1,
+      ladrar: () => {
+        console.log(this); // Aquì this hace referencia directamente a el objeto perro1
+        console.log(this.variablePorFuera);
+      }
+    }
+
+    perro2.ladrar();
+
+    // La mejor practica para crear metodos dentro de un objeto literal se crean de esta forma.
+
+    const perro3 = {
+      nombre: "Dona",
+      edad: 1,
+      ladrar() { // Mejor forma de declarar los metodos
+        console.log(this);
+      }
+    };
+
+    perro3.ladrar();
+
+  </script>
+</body>
+</html>
