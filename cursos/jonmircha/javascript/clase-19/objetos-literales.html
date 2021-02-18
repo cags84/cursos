@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetos literales</title>
+</head>
+<body>
+  <h1>Objetos literales</h1>
+  <p>Son una nueva forma de escribir atributos e incluso metodos, una nueva forma de asignarlos.</p>
+
+  <p>Si la variable y metodos se llaman igual a como los vamos a llamar dentro de el objeto literal, podemos colocar solo el nombre de la propiedad</p>
+
+  <script>
+    console.log("Tema: Objetos literales.");
+
+    let nombre = "Carlos";
+    let edad = 7;
+
+    const persona = {
+      nombre: nombre,
+      edad: edad,
+      correr: function() {
+        console.log("Corre forest");
+      }
+    }
+
+    console.log('');
+    console.log(persona);
+    console.log(persona.correr());
+
+
+    console.log('');
+    const persona2 = {
+      nombre,
+      edad,
+      correr () { // Nueva forma de declarar la función dentro 
+        console.log("Correr forest");
+      }
+    };
+
+    console.log(persona2);
+    console.log(persona2.correr());
+    
+
+  </script>
+</body>
+</html>
