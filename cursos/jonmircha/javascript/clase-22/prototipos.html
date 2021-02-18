@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototipos</title>
+</head>
+<body>
+  
+  <h1>Prototipos</h1>
+
+  <p>JavaScript multiparadigma, (funcional, POO, etc), una caracteristica en JavaScript es que la POO es muy diferentes a los lenguajes como C++ o Java, por ejemplo clases se tiene despues de ES6, sin embargo las clases en JavaScript no es más que una azúcar sintactica, porque detras de camaras, todo son Prototipos.</p>
+
+  <p>En POO, hay cuadro conceptos muy importantes:</p>
+  <ul>
+    <li>Clases: Modelo a seguir, algo que nos sirve como un esquema para basarnos y generar instancia.</li>
+    <li>Objetos: Es una <em>instancía</em>(copía) de una clase.</li>
+    <ul>
+      <li>Atributos: Es una carácteristica o propiedad del objeto, son variables dentro de un objeto.</li>
+      <li>Metodos: Acciones que un objeto puede realizar, son metodos dentro un objeto (son verbos), al fín son funciones dentro de un objeto.</li>
+    </ul>
+  </ul>
+
+  <script>
+    console.log("Tema: Prototipos.")
+
+    // Objeto literal
+    const animal = {
+      nombre: "Snoopy",
+      sonar() {
+        console.log("Hago sonidos porque estoy vivo.");
+      }
+    };
+    console.log(animal);
+
+    const animal2 = {
+      nombre: "Lola Bunny",
+      sonar() {
+        console.log("Hago sonidos porque estoy vivo.");
+      }
+    };
+    console.log(animal2);
+
+    // Lo anterior no es funcional, para eso tenemos las clases.
+
+    // Funcion constructora, la creamos una sola vez y a partir de ella voy a generar nuevas instancias, nuevos objetos que tengan esas propuidades y metodos.
+
+    // Una funcion declarada, genera un prototipo vacio.
+
+    const f = function() {};
+    console.log(f);
+
+    /* Función constructora */
+
+    // En una funcion constructora, los atributos y los metodos tienen que colgar de el scope del objeto con la palabra reservada this, se obtiene esto.
+
+    function Animal(nombre, genero) {
+      // Las funciones constructora tienen un metodo especial constructor
+
+      // Atributos
+
+      this.nombre = nombre, // Atributo
+      this.genero = genero // Atributo
+
+      // Metodos
+      // this.sonar = function() {
+      //   console.log("Hago sonidos porque estoy vivo!");
+      // }
+
+      // this.saludar = function() {
+      //   console.log(`Hola me llamo ${this.nombre}`);
+      // };
+    };
+
+    // Instancias.
+    const snoopy = new Animal('Snoopy', 'Macho');
+    console.log(snoopy);
+    console.log(snoopy.nombre);
+
+    const lolaBunny = new Animal('Lola', 'Hembra');
+    console.log(lolaBunny);
+    console.log(lolaBunny.nombre);
+
+    // Vemos que tenemos la función sonar duplicar el todos los objetos.
+    /* Mejora a este problema de duplicado */
+    // Lo idea es que las funciones constructora solo tengan los atributos y los metodos esten en los prototipos.
+
+
+    /*
+    NombreFuncionConstructora.prototype.nombreMetodo = function(parametros) {
+      bloque_de_la_function;
+    };
+    */
+
+    // En este caso los metodos estan pegados a la funcion constructora, más no a la instancia.
+
+    Animal.prototype.sonar = function() {
+      console.log("Hago sonidos porque estoy vivo!");
+    };
+
+    Animal.prototype.saludar = function () {
+      console.log(`Hola me llamo ${this.nombre}`);
+    };
+
+    console.log(snoopy.sonar()); // Ahora lo llamamos
+
+    /* JavaScript esta basado en prototipos */
+
+
+
+  </script>
+</body>
+</html>
