@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Break y continue</title>
+</head>
+<body>
+  <h1>Break y Continue</h1>
+  <p>Break, es para romper la secuencialidad del código, </p>
+  <p>Continue, sirve para saltar la secuencialidad de un bloque, en un loop por ejemplo.</p>
+
+  <p>Break y continue se debeb usar en estructura de control imperactivas como for , while, do-while, No se debería utilizar en un foreach de un arreglo por ejemplo.</p>
+
+  <script>
+    console.log("Tema: Break y continue.");
+    const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+    for(let i=0, count = numeros.length; i < count; i++) {
+      if(i === 5) {
+        break; // Le decimos que cuando i llegue a 5, se salga del bucle en este caso
+        //continue; // Salta la ejecución de la secuencia normal del loop y pasa al siguiente.
+      }
+      console.log(numeros[i]);
+    }
+
+  </script>
+</body>
+</html>
