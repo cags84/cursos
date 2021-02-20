@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herencia prototipica</title>
+</head>
+<body>
+  <h1>Herencia prototipica</h1>
+  <p>La capacidad de herededar de un padre a un hijo, en JavaScript se da a manera de herededar propiedades en cadena.</p>
+
+  <script>
+    console.log('Herencia prototipica');
+
+    function Animal (nombre, genero) {
+      this.nombre = nombre,
+      this.genero = genero
+    };
+
+    Animal.prototype.sonar = function() {
+      return "Se hablar";
+    }
+
+    // Herencia prototipica
+
+    function Perro(nombre, genero, tamano) {
+      this.super = Animal; // LLamamos al padre
+      this.super(nombre, genero); // Seteamos los paramatros de entrada
+      this.tamano = tamano;
+    }
+
+    // Perro esta heredando de Animal().
+    Perro.prototype = new Animal();
+    Perro.prototype.constructor = Perro;
+
+    // Sobreescribir los metodos del padre
+    Perro.prototype.sonar = function() {
+      return "Soy un perro y puedo ladrar";
+    };
+
+    // Un metodo para el objeto Perro
+    Perro.prototype.ladrar = function() {
+      return "Guauuu Guauuuu";
+    };
+
+
+    const snoopy = new Perro("Snoppy", "Macho", 'Mediana');
+    console.log(snoopy);
+    console.log(snoopy.sonar);
+    console.log(snoopy.ladrar);
+
+
+
+  </script>
+</body>
+</html>
