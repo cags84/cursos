@@ -8,12 +8,67 @@
 </head>
 <body>
   <h1>Clases y herencia</h1>
-  <p></p>
+  <p>Desde el año 2015, el estandar de JavaScript ya en JavaScript podemos escribir clases, aunque realmente sigue siendo funciones prototipo.</p>
 
   <script>
     console.log("Tema: Clases y herencia.");
 
-    
+    // Clases JavaScript 2015
+    class Animal {
+      // Para poder trabajar con parametros a la hora de instanciar el objeto lo hacemos con el constructort
+      constructor(nombre, genero) {
+        this.nombre = nombre;
+        this.genero = genero;
+      }
+
+      // Metodos dentro de la clase
+      sonar() {
+        return `Hago sonidos porque estoy vivo`;
+      }
+
+      saludar() {
+        return `Hola me llamo ${this.nombre}`;
+      }
+
+    }
+
+    const mimi = new Animal('mimi', 'hembra');
+    const scooby = new Animal('Scopby', 'Macho');
+
+    console.log(mimi);
+    console.log(scooby);
+
+    console.log(mimi.saludar());
+    console.log(mimi.sonar());
+    console.log(scooby.saludar());
+    console.log(scooby.sonar());
+
+
+    // Herencia
+    class Perro extends Animal {
+      constructor(nombre, genero, tamanio) {
+        super(nombre, genero); // Heredamos a la clase que heredamos, manda a llamar al constructor de la clase padre
+
+        this.tamanio = tamanio;
+      }
+
+      sonar() {
+        console.log("Soy un perro y mi sonido es un ladrido");
+      }
+
+      ladrar() {
+        console.log("Guauuu Guauuu....");
+      }
+
+    }
+
+    // Herencia objeto
+    const scooby2 = new Perro("Scobby2", "Macho", "Gigante");
+    console.log("");
+    console.log(scooby2);
+    console.log(scooby2.ladrar());
+
+
 
   </script>
 </body>
