@@ -8,12 +8,51 @@
 </head>
 <body>
   <h1>Setters - Getters</h1>
-  <p></p>
+  <p>En JavaScript, no se puede crear clases privadas, se puede decir que todas las clases que generamos en JavaScript son públicas, sin embargo hay ciertas caracteristcas que si existes, por ejemplo los metodos estatico.</p>
+  <p>Un metodo estatico es aquel que se puede ejecutar sin necesidad de haber creado un objeto las clases.</p>
+  <p>Setter y Getters, son metodo especiales que nos van a permitir estables y obtener el valor que tiene las propiedades o metodos dentro de la clase.</p>
 
   <script>
     console.log("Tema: Setters - Getters");
 
-    
+    // Metodos estaticos
+    class Perro {
+      constructor(nombre, genero, tamanio) {
+        this.nombre = nombre;
+        this.genero = genero;
+        this.tamanio = tamanio;
+        this.raza = null;
+      }
+
+      // Setters y Getters, creamos los metodos
+      setRaza(raza) {
+        this.raza = raza;
+      }
+
+      getRaza() {
+        return this.raza;
+      }
+
+
+      sonar() {}
+
+      ladrar() {}
+
+      static queEres() {
+        return "Los perros son animales.........";
+      }
+    }
+
+    const dona = new Perro("Dona", "Hembra", "Pequeña");
+    console.log(dona);
+
+    dona.setRaza("Criollo");
+    console.log(dona.getRaza());
+    console.log("");
+
+    // Puedo ejecutar metodos estaticos solo con nombre de la clase y el metodo estatico requerido.
+    console.log(Perro.queEres());
+
   </script>
 </body>
 </html>
