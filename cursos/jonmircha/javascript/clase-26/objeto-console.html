@@ -8,12 +8,107 @@
 </head>
 <body>
   <h1>Objeto Console</h1>
-  <p></p>
+  <p>Objeto console, console es un objeto que ya reconoce JavaScript, pero tiene muchos metodoss.</p>
 
   <script>
     console.log("Tema: Objeto Console.");
 
+    console.log(console);
+
+    console.log("");
+    console.log("Mensaje de registro de lo que esta pasando");
+    console.error("Esto es un error");
+    console.warn("Esto es un alerta");
+    console.info("Mensaje para dar información");
+    console.log("");
+
+    let nombre = "Carlos";
+    let apellido = "Guzmán";
+    let edad = 35;
+
+    // Imprimir en console.log
+    console.log(nombre, apellido, edad);
+    console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`);
+
+    // Parecido a printf, imprimir con formato.
+    console.log(`Hola mi nombre es %s %s y tengo %d años`, nombre, apellido, edad);
+    console.log("");
+
+    // Limpiar la consola
+    console.clear();
+
+    console.log(window);
+    console.log(document); // De forma nativa lo leer como un documento html
+
+    console.dir(window); // Lo representa como un objeto
+    console.dir(document); // Lo representa como un objeto
+
+    // Grupo en la consola, sirve para agrupar e identar los diferentes items.
+    console.group("Los cursos de @jhonmichar en youtube");
+    console.log("JavaScript");
+    console.log("Curso de NodeJS");
+    console.log("Curso de PWA's");
+    console.log("Curso de Flexbox");
+    console.log("Curso diseño y programación web");
+    console.groupEnd();
+
+    console.groupCollapsed("Los cursos de @jhonmichar en youtube");
+    console.log("JavaScript");
+    console.log("Curso de NodeJS");
+    console.log("Curso de PWA's");
+    console.log("Curso de Flexbox");
+    console.log("Curso diseño y programación web");
+    console.groupEnd();
+    console.clear();
+
+    // Representación a manera de tabla
+
+    console.log("Tabla.")
+    console.table(Object.entries(console).sort()); // Me muestra una tabla, con los datos que le pasemos
+    console.clear();
+
+    const numeros = [1, 2, 3, 4, 5];
+    const vocales = ["a", "e", "i", "o", "u"];
+
+    console.table(numeros);
+    console.table(vocales);
+
+    const perro = {
+      nombre: "Dona",
+      raza: "Boxer",
+      color: "cafe"
+    };
+
+    console.table(perro);
+    console.clear();
     
+
+    // Ver el tiempo que tarda en ejecutar unas instrucciones
+    console.time("Cuanto tiempo tarda mi código");
+    const arreglo = Array(1000000);
+    for(let i=0, count = arreglo.length; i < count; i++) {
+      arreglo[i] = i;
+    }
+    console.timeEnd("Cuanto tiempo tarda mi código");
+
+
+    // Cuantas veces se ha ejecutado cierta parte del codigo
+    console.clear();
+    for(let i=0; i <= 100; i++) {
+      console.count('demo');
+      console.log(i);
+    }
+
+    console.clear();
+
+    // Formas de hacer pruebas unitarias, o hacer test.
+
+    let x = 3;
+    y = 2;
+    pruebaXY = "Se espeta que x siempre sea menor que Y";
+
+    console.assert(x < y, {x,y}, pruebaXY);
+
   </script>
 </body>
 </html>
