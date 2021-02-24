@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,30 @@
   <title>Alert - Confirm - Prompt</title>
 </head>
 <body>
-  
+  <h1>Alert - Confirm - Prompt</h1>
+  <p>Metodos, alert - confirm - prompt, los tres sirven para interactura con el usuario y cuelgan del objeto padre (Window), pero la verdad no es necesario poner el window.</p>
+
+  <script>
+    console.log("Tema: Alert - Confirm - Prompt");
+
+    console.log(window); // Objeto padre
+    //window.alert("hola esto es una alerta");
+    //window.confirm("Esto es un confirm"); // Sale con aceptar y cancelar.
+    //window.prompt("Esto es un prompt"); // Le permite al usuario ingresar un valor.
+
+    //alert();
+    //confirm();
+    //prompt();
+
+    let alerta = alert("Esto es una alerta");
+    let confirmacion = confirm("Esta es una confirmación");
+    let aviso = prompt("Hola esto es un aviso");
+
+    console.log(alerta); // Devuelve undefined
+    console.log(confirmacion); // Depende de la opción es true
+    console.log(aviso); // Devuelve una cadena de texto, con lo que ingreso el usuario, null si el usuario ingreso algo pero le dio al boton de cancelar.
+    
+
+  </script>
 </body>
 </html>
