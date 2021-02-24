@@ -8,10 +8,41 @@
 </head>
 <body>
   <h1>Objeto Date</h1>
-  <p></p>
+  <p>Constructor Date, la hora se va a mostrar va ser con respecto con la hora local del navegador, libreria <a href="https://momentjs.com/" target="_blank"><em>moment.js</em></a> </p>
 
   <script>
     console.log("Tema: Objeto Date");
+    console.log("");
+
+    //console.log(Date());
+
+    let fecha = new Date();
+    console.log(fecha);
+
+    console.log(fecha.getDate()); // El día del mes
+    console.log(fecha.getDay()); // Representa el día de la semana 0->domingo, sabado->7
+    console.log(fecha.getMonth()); // El mes
+    console.log(fecha.getYear()); // los años desde 1900 cuantos han pasado
+    console.log(fecha.getFullYear()); // nos devuelve el año
+    console.log(fecha.getHours()); // Nos devuelve la hora formato 24 horas
+    console.log(fecha.getMinutes()); // Nos devuelve los minutos
+    console.log(fecha.getSeconds()); // Nos devuelve los segundos
+    console.log(fecha.getMilliseconds()); // Nos devuelve los segundos
+    console.log(fecha.toString()); // Nos devuelve una cadena
+    console.log(fecha.toDateString()); // Nos devuelve "Web Feb 24 2021"
+    console.log(fecha.toLocaleDateString()); // Fecha en formato "DD/MM/YYYY"
+    console.log(fecha.toLocaleString()); // Parecido TimeStamps
+    console.log(fecha.toLocaleTimeString());
+    console.log(fecha.getTimezoneOffset()); // Nos devuelve 300 6*5
+    console.log(fecha.getUTCDate()); // Día del mes en UTC
+    console.log(fecha.getUTCHours()); // Día del mes en UTC
+    console.log(fecha.getUTCFullYear());
+    console.log(Date.now()); // TimeStamps, segundos que han pasado desde 1 enero de 1900
+    
+    let cumpleCarlos = new Date(1984, 2, 19); // Le pasamos la fecha de mi cumpleaño
+    console.log(cumpleCarlos);
+
+
   </script>
 </body>
 </html>
