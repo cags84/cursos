@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Expresiones Regulares</title>
 </head>
 <body>
-  
+  <h1>Expresiones Regulares</h1>
+  <p>Una secuencia de carácteres que forman un patron de busqueda, que normalmente es utilizado en la cadenas de texto.</p>
+  <img src="img/Captura.PNG" alt="">
+
+  <script>
+    console.log("Tema: Expresiones Regulares");
+
+    // Como se define una expresion regular.
+    let cadena = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+    // Con funcion constructora
+    // g-> de forma global, i-> ignora mayusculas y minisculas.
+    let expReg = new RegExp("lorem", "gi"); // patron, flags(pequeñas modificaciones que le queremos agregar -g(global)-)
+
+    let expReg1 = /lorem/gi;
+
+    console.log(expReg.test(cadena)); // Devuelve true o false si esta dentro de la cadena.
+    console.log(expReg.exec(cadena)); // Devuelve un arreglo con la última coincidencia si tiene la bandera g y si no la primera posición donde la encontro.
+
+    console.log(expReg1.test(cadena));
+    console.log(expReg1.exec(cadena));
+
+    console.clear();
+
+    let expReg2 = /\d/ig;
+    console.log(expReg2.test(cadena));
+
+    // Los corchetes significan un listado valido.
+    let expReg3 = /[0-9]/ig; // valida números en la expresion
+    let expReg4 = /lorem{1}/gi; // Encontrar al menos una vez la palabra lorem
+    let expReg5 = /lorem{1,3}/gi; // Encontrar una o tres veces la palabra lorem
+    let expReg6 = /lorem{1,}/gi; // Encontrar al menos una vez la palabra lorem
+
+  </script>
 </body>
 </html>
