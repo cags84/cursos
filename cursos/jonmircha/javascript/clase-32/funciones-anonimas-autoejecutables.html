@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones anonimas autoejecutable</title>
+</head>
+<body>
+  <h1>Funciones anonimas autoejecutable</h1>
+  <p>Patro muy utilizado para la ejecución de código invoke function express, es una función en la que se engloba todo el código que quieres ejecutar.</p>
+
+  <p>No solo las definimos, si  no que las estamos ejecutando al momento de crearlas, esta protegida de invocación de librerias secundaria, dado que esta autocontenida.</p>
+
+  <p>Te permite pasar parametros de una manera más amigable.</p>
+
+  <img src="img/Captura.PNG" alt="">
+
+  <script>
+    console.log("Tema: Funciones anonimas autoejecutable");
+
+    // Funcion anonima autoejecutable
+    (function(nombre) {
+      console.log(`Hola ${nombre}`);
+    })("Carlos");
+
+    (function(parametro) {
+      console.log(`Una función autoejecutable`);
+      parametro.forEach(function(el) {
+        console.log(el);
+      });
+    })([1,2]);
+
+    // Pasandole parámetros
+    (function(d,w,c) {
+      console.log("");
+      console.log(d);
+      console.log(w);
+      console.log(c);
+      c.log("Esta es ejecutada desde el alias");
+    })(document, window, console);
+
+
+  </script>
+</body>
+</html>
