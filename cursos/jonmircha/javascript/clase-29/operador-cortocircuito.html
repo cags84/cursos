@@ -8,10 +8,21 @@
 </head>
 <body>
   <h1>Operador de cortocircuito</h1>
-  <p></p>
+  <p>Es un conjunto de operadores que son importantes, funcionan poniendos dos condiciones ya sean con operador && o operador ||.</p>
+  <img src="img/Captura.PNG" alt="">
 
   <script>
     console.log("Tema: Operador de cortocircuito");
+
+    function saludar(nombre) {
+      nombre = nombre || "Desconocido"; // Operador Cortocircuito, devuelve "Carlos"
+      nombre = nombre && "Desconocido"; // Operador Cortocircuito, devuelve "Desconocido"
+      return `Hola ${nombre}`;
+    }
+
+    console.log(saludar("Carlos"));
+    console.log(saludar());
+
   </script>
 </body>
 </html>
