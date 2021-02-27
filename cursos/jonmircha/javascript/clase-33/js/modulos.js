@@ -9,3 +9,6 @@ console.log(calculos.restar(3,4));
 
 // export default
 saludar();
+
+// forma de trabajar con react.
+//import React, {Component} from 'react':
