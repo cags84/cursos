@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <h1>Ejercicio 5</h1>
+    <p>
+      Programa una función que invierta las palabras de una cadena de texto, pe.
+      miFuncion("Hola Mundo") devolverá "odnuM aloH".
+    </p>
+
+    <script>
+      console.log("Tema: Ejercicio 5");
+
+      // Programación imperativa
+
+      function invertirCadena(cadena) {
+        let newCadena = "";
+
+        for (let i = cadena.length - 1; i >= 0; i--) {
+          newCadena += cadena[i];
+        }
+
+        return newCadena;
+      }
+
+      console.log(invertirCadena("Hola Mundo"));
+
+      console.clear();
+
+      // Programador funcional
+
+      const invertirCadenaFuncional = (cadena) => {
+        cadena.map((el) => {
+          console.log(el);
+        });
+      };
+
+      console.log(invertirCadenaFuncional("Hola Mundo"));
+    </script>
+  </body>
+</html>
