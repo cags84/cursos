@@ -234,11 +234,57 @@ create.blade.php
 @endsection
 ```
 
-## Paso 13, 
-## Paso 14, 
-## Paso 15, 
-## Paso 16, 
-## Paso 17,
+## Paso 13, Relaciones
+
+Un usuario tiene varios curriculums, un curriculum(resume) pertenece a un solo usuario
+
+- Modelos:
+
+Resume.php
+
+....
+
+```php
+public function user() { // Observar que el metodo se llama en singular
+	$this->belongTo(User::class);
+}
+```
+
+User.php 
+
+```php
+public function resumes() { // Observar que el metodo se llama en plural
+	$this->hasMany(Resume::class);
+}
+```
+## Paso 14, Proteger los controladores
+
+Para ello en el controlador, crearemos un metodo constructor y le pasamos este middleware
+
+```php
+public function __construct() {
+	$this->middleware('auth');
+}
+```
+
+## Paso 15, Verificar los formularios
+
+## Paso 16, Para procesar imagenes
+
+```bash
+> php artisan storage:link
+> composer require intervention/image
+```
+
+## Paso 17, Politicas de seguridad
+
+Politica que nos va a servir para aplicar seguridad
+
+```bash
+> php artisan make:policy --help
+> php artisan make:policy -m Resume ResumePolicy
+```
+
 ## Paso 18,
 ## Paso 19,
 ## Paso 20,
