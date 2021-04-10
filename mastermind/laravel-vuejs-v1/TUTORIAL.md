@@ -108,3 +108,137 @@ Aquí creamos un modelo de nombre `Resume`, y con la opción -m le decimos que n
 
 ## Paso 7, Ahora modificamos la migración para crear las columnas de la base de datos que necesitamos.
 
+```php
+public function up()
+    {
+        Schema::create('resumes', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->string('title');
+            $table->string('name');
+            $table->string('email');
+            $table->string('website')->nullable();
+            $table->string('picture')->nullable();
+            $table->text('about')->nullable();
+            $table->foreignId('user_id');
+        });
+    }
+```
+
+Ahora refrescamos la migraciones en laravel
+
+```bash
+> php artisan migrate
+```
+Y revisamos que todo este ok.
+
+```sql
+> show tables;
++----------------------------+
+| Tables_in_laravel_vuejs_v1 |
++----------------------------+
+| failed_jobs                |
+| migrations                 |
+| password_resets            |
+| resumes                    |
+| users                      |
++----------------------------+
+
+> describe resumes;
+
+MariaDB [laravel_vuejs_v1]> describe resumes;
++------------+---------------------+------+-----+---------+----------------+
+| Field      | Type                | Null | Key | Default | Extra          |
++------------+---------------------+------+-----+---------+----------------+
+| id         | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| created_at | timestamp           | YES  |     | NULL    |                |
+| updated_at | timestamp           | YES  |     | NULL    |                |
+| title      | varchar(255)        | NO   |     | NULL    |                |
+| name       | varchar(255)        | NO   |     | NULL    |                |
+| email      | varchar(255)        | NO   |     | NULL    |                |
+| website    | varchar(255)        | YES  |     | NULL    |                |
+| picture    | varchar(255)        | YES  |     | NULL    |                |
+| about      | text                | YES  |     | NULL    |                |
+| user_id    | bigint(20) unsigned | NO   |     | NULL    |                |
++------------+---------------------+------+-----+---------+----------------+
+```
+## Paso 8, Ahora creamos el controlador
+
+Ver en la documentación: https://laravel.com/docs/8.x/controllers#actions-handled-by-resource-controller
+
+```bash
+
+> php artisan make:controller --help
+
+> php artisan make:controller ResumeController --model=Resume
+
+```
+
+## Paso 9, Modificamos el archivo web.php para agregar nuestras propias rutas
+
+Creamos la ruta en el archivo, web.php
+
+```php
+use App\Http\Controllers\ResumeController;
+....
+Route::get('/resumes/create', [ResumeController::class, 'create']);
+
+```
+
+## Paso 10, Modificamos el controlador para que responda algo de pruebas, ResumeController
+
+```php
+public function create() {
+    return response('Hola desde resume controller');
+}
+```
+
+## Paso 11, Creamos la estrucura de las vistas.
+
+En la carpeta views, creamos un directorio llamado resumes, y en este vamos a tener todas las vistas para la ruta resumes.
+
+```
+> mkdir -p app/resources/views/resumes
+```
+Dentro de ella creamos un archivo llamado create.blade.php, y agremaos el formulario para crear un resume.
+
+Modificamos el controlador en el metodo create, para que muestre una vista.
+
+```php
+public function create() {
+    return view('resumes.create');
+}
+```
+
+## Paso 12, Modificamos el controladr y la vista para pasarle información.
+
+ResumeController.php
+
+```php
+public function create() {
+    $data = "Texto de prueba";
+    return view('resumes.create', ['data' => $data]);
+}
+```
+
+
+create.blade.php
+
+```php
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    {{ $data }}
+</div>
+@endsection
+```
+
+## Paso 13, 
+## Paso 14, 
+## Paso 15, 
+## Paso 16, 
+## Paso 17,
+## Paso 18,
+## Paso 19,
+## Paso 20,
