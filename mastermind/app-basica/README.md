@@ -445,6 +445,12 @@ php artisan make:policy --help
 
 ## Paso #17
 
+Introducción a VUEJS
+
+https://jsonresume.org/schema/
+
+Por defecto al utilizar vue en la autenticación, se instala por defecto en el proyecto VueJS, podemos ver que laravel trae un archivo en `resources/js/components/ExampleComponent.vue`, donde podemos ver nuestro primer componente.
+
 ```bash
 >
 ```

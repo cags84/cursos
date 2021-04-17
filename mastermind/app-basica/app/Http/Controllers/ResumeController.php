@@ -110,17 +110,19 @@ class ResumeController extends Controller
     public function update(Request $request, Resume $resume)
     {
 
-
         $data = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
             'website' => 'nullable|url',
             'picture' => 'nullable|image',
             'about' => 'nullable|string',
+            'skills' => 'nullable|array',
             'title' => Rule::unique('resumes')
                 ->where(fn($query) => $query->where('user_id', $resume->user->id))
                 ->ignore($resume->id)
         ]);
+
+        //dd($data);
 
         if(array_key_exists('picture', $data)) {
             $picture = $data['picture']->store('pictures', 'public');
