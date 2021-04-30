@@ -1,0 +1,61 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+/* FIX img */
+img {
+    max-width: 100%;
+}
+
+/* Metodología BEM */
+.main-title {text-align: center;}
+
+.header {background-color: lightblue; height: 50px;}
+
+.main {background-color: lightgreen; height: 600px;}
+
+.footer {background-color: lightsalmon; height: 200px;}
+
+/* Main menu */
+.main-menu {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.main-menu__item {
+    line-height: 3;
+}
+
+.main-menu__link {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: green;
+}
+
+/* No existiría conflicto, dado que la especificidad de la clase es mayor que la de este elemento por ejemplo. */
+a {color: red;} /* Espicifidad menor que la la clase .main-menu */
+
+/* Una clase que es un menú mero con un modificador, que en este caso es el background */
+.main-menu__link--active {
+    background-color: red;
+}
+
+
+/* Otro ejemplo */
+.main-form {}
+
+.main-form__label {}
+
+.main-form__submit {}
+

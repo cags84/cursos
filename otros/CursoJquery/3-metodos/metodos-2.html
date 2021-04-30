@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery - Metodos 2</title>
+	<style type="text/css">
+		.rojo {
+			color: red;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+
+	<p>Texto 1</p>
+	<p class="rojo">Texto 2</p>
+
+	<!-- Jquery -->
+	<script src="../js/jquery-1.11.3.min.js"></script> 
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Añadir y quitar clases css
+			//$('p:last').addClass('rojo');
+			$('p:last').removeClass('rojo');
+		});
+	</script>	
+</body>
+</html>

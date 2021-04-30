@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+@import 'normalize-8.0.1.css';
+
+@font-face {
+    src: url(/dist/assets/fonts/Lato-Bold.ttf);
+    font-family: 'myFont'; /*Nombre que se le da a la fuente */
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ------------------------------------------------------- */
+
+/* Se suelen utilizar dos fuentes, una para los títulos y otra para los textos. */
+
+/* .title {
+    font-family: 'Raleway', sans-serif;
+}
+
+.parrafo {
+    font-family: 'Montserrat', sans-serif;
+} */
+
+/* 
+    @font-face 
+
+    Sitios donde se puedes descargar
+    https://datafint.com/es
+    https://1001fonts.com
+*/
+
+.title {
+    font-family: myFont;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position - Absolute</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles-dist.css">
+</head>
+<body>
+    <!-- Position Absolute -->
+    <h1>Position - Absolute</h1>
+    <p>El valor absolute hace que el elemento se coloque respecto a su contenedor posicionado más cercano, con cualquier propiedad <em>position</em>, diferente a la static, si no encuentra ninguno será el viewport</p>
+
+    <p>El <em>viewport</em>, es el espacio que tenemos dispobible para mostrar elementos en la página, es decir lo que seria el body, no se cuenta la barra de url, favoritos, etc.</p>
+
+    <p>El elemento con position absolute, no conserva el espacio en el flujo,
+        por ejemplo si tenemos un h1 y le ponemos position:absolute, sus dimensiones ya no van hacer del 100% si no de lo que ocupe el elemento.
+    </p>
+
+    <p>Si el elemento con position absolute no tiene sus dimensiones declaradas, este se ajusta al contenido.</p>
+
+    <p>Su punto de referencia no se modificará aunque movamos el elemento.</p>
+
+    <h3 style="position: absolute; border: 1px solid red;">Este es un h3 con position: absolute</h3>
+    <br>
+    <br>
+    <br>
+
+    <hr>
+
+    <h2>Ejemplo</h2>
+
+    <div class="contenedor">
+        <div class="box box1"></div>
+        <p class="texto">Texto de ejemplo</p>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+    </div>
+
+</body>
+</html>

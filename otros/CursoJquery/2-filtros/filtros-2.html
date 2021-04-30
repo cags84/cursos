@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery - Filtros 2</title>
+</head>
+<body>
+
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li>Item 4</li>
+		<li>Item 5</li>
+	</ul>
+
+
+	<!-- Jquery -->
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Filtro para selecionar un elemento en concreto
+			//$('li:eq(2)').css('background', 'blue');
+			// Para marcar despues de esa posicion
+			//$('li:gt(2)').css('background', 'blue');
+			// Vamos a marcar los elementos anteriores
+			$('li:lt(2)').css('background', 'blue');
+		});
+	</script>	
+</body>
+</html>

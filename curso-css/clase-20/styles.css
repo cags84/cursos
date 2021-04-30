@@ -1,0 +1,121 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ------------------------------------------------------------ */
+
+/* 
+    :root - Representa la raiz del documento (html) usando una pseudoclase tenemos más especificidad que si usáramos html
+    :empty - Esta pseudoclase se aplica para los elementos vacios, es decir, etiquetas que no tienen contenido
+    
+    -child
+        :first-child - Selecciona al primer hijo (independientemente del tipo de etiqueta)
+        :last-child - Selecciona al ultimo hijo (independientemente del tipo de etiqueta)
+        :nth-child(n) - Selecciona al hijo n(independientemente del tipo de etiqueta)
+        :nth-last-child(n) Selecciona al hijo n empezando a contar desde el último (independientemente del tipo de etiqueta)
+        :only-child Selecciona al hijo unico(independientemente del tipo de etiqueta)
+    
+    -type
+        :first-of-type
+        :last-of-type
+        :nth-of-type()
+        :nth-last-of-type()
+        :only-of-type
+    Valores posibles:
+        odd - Impares
+        even - Pares
+        numeros enteros - 2,3,4...
+        equaciones (1n,3n,4n+1,n+4,...)
+            n es un multiplicador va de 0 hasta que se quede sin elementos
+    
+    Negation
+        :not() - Selecciona al elemento que no cumpla la condición, se puede poner cualquier selector salvo otro :not
+*/
+
+/* Estas estan consiseradas la más importantes e interesante */
+
+/* :root, hace exactamente que html, pero al ser una pseudoclase tiene más especifidad */
+
+/* Es bueno utilizar para utilizar para crear las variables CSS, de otro modo no es bueno */
+/* :root {
+} */
+
+/* :empty, seleccionamos los elementos que no tienen contenido */
+/* .parrafo {
+    padding: .5em;
+    background-color: lightcoral;
+} */
+
+/* all, resetea todas las propiedades, excepto direcction y otro*/
+/* Reseta los estilos por defecto */
+/* padding: 0; */
+/* .parrafo:empty {
+    all: unset;
+} */
+
+/* Pseudoclases Child */
+
+/* Al primer hijo que tenga la clase parrafo se le va a aplicar, no le importa el tipo de etiqueta, solo que sea el primer hijo, en este caso en particular de parrafo. */
+
+.parrafo:first-child { 
+    background-color: lightcoral;
+}
+
+.parrafo:last-child {
+    background-color: lightskyblue;
+}
+
+/* ntn-child, selecciona al hijo n, independientemente del tipo de etiqueta, odd-> impares, even->pares, numeros enteros 1,2,3,4,   */
+
+.parrafo:nth-child(odd) {
+    background-color: lightcoral;
+}
+
+.parrafo:nth-child(even) {
+    background-color: lightgray;
+}
+
+.parrafo:nth-child(2) {
+    background-color: lightsalmon;
+}
+
+/* n es una secuencia para multiplicar */
+.parrafo:nth-child(2n) {
+    background-color: limegreen;
+}
+
+.parrafo:nth-last-child(1) {
+    background-color: lightskyblue;
+}
+
+.parrafo:only-child { /* Selecciona al hijo unico, solo tiene sentido cuando a la etiqueta a la que se la estamos aplicando es hijo unico. */
+    background-color: lightgray;
+}
+
+.parrafo:nth-of-type(1) {
+    /* A estas si les importa el tipo de etiqueta */
+    background-color: navy;
+    color: white;
+}
+
+.parrafo:first-of-type {
+    background-color: orchid;
+}
+
+
+/* Negation :not, se puede poner a cualquier elemento excepto not */
+
+/* Se le aplica a todas la etiquetas que tenga la clase .parrafo, pero que no sean un div */
+.parrafo:not(div) {
+    padding: .5em;
+    background-color: lightcoral;
+    /* background-color: green; */
+}

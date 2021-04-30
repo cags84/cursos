@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* -------------------------------------------------------- */
+
+body {
+    padding-top: 3.5em; /* Para que el menu, posicionado con fixed no tape el resto de contenido que sube a ocupar el contenido */
+}
+
+.menu {
+    width: 100%;
+    background-color: lightseagreen;
+    font-size: 2em;
+    padding: .5em;
+    text-align: center;
+    position: fixed;
+    top: 0;
+}
+
+.title {
+
+}
+
+.texto {
+
+}

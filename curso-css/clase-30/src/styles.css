@@ -1,0 +1,60 @@
+@charset 'UTF-8';
+@import 'normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------- */
+/*
+    clip-path: Es una máscara que oculta partes de una caja
+        circle(): dibuja un círculo, puede tener una medida fija, circle(100px) o podemos especificar un centro con at, circle(100px at medidaX medidaY | palabrasClaveX palabrasClaveY)
+        ellipse(): dibuja una elipse, funciona igual que el círculo, pero en este caso tenemos que especificar 2 centros, el horizontal y el vertical
+        inset(): dibuja un borde transparente por dentro de la caja
+            inset(all| Y X | top X bottom | top left bottom right)
+            existe la opción de redondear las esquinas, para ello después de los valores de inset pondremos round
+            inset(*** round all | 
+                top-left & bottom-right top-right & bottom-left |
+                top-left top-right & bottom-left bottom-right
+                top-left top-right bottom-right bottom-left
+            )
+        polygon(): Especifica una serie de puntos (mínimo 3) para definir la zona visible siendo el punto 0 0 la esquina superior izquierda
+        los puntos se especifican por parejas de ejeX y ejeY separados por comas
+        polygon(0 0, 100% 0, 0 100%)
+        Generador de clip-path: https://bennettfeely.com/clippy/
+*/
+
+body {
+    background-color: #333;
+    color: white;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.box__item {
+    background-color: lightcoral;
+    width: 400px;
+    height: 400px;
+    clip-path: circle(100px at top right);
+    clip-path: ellipse(150px 80px at top);
+    clip-path: inset(20px 40px 70px 80px);
+    clip-path: inset(20px round 30px 5px 20px);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    /* Dibujar un triangulo equilatero que comience en primer cuadrado */
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    /* Dibujar un cuadrado, para que este en el centro */
+    clip-path: polygon(25% 25%, 75% 25%, 75% 75%, 25% 75%);
+    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+}
+
+.box__item:hover {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}

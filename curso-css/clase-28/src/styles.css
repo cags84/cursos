@@ -1,0 +1,105 @@
+@charset 'UTF-8';
+@import 'normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+/* img {max-width: 100%} */
+
+/* ------------------------------------------------------- */
+/* 
+    No existen propiedades para imágenes en CSS
+    1. Imágenes responsive. En el archivo base se recomienda poner esta regla
+        img{
+            max-width:100%;
+        }
+    
+    2. Las imágenes por defecto son elementos inline, esto causa un espacio por debajo debido a su line-height, se puede solucionar de dos formas.
+        Dando un line-height:0 al contenedor o un display:block a la imagen
+    3. Centrado horizontal
+        imagen con display:block y márgenes laterales automáticos
+        text-align: center, si la imagen no es de bloque
+    4. Centrado vertical
+        Flexbox (La mejor opción)
+        vertical-align: middle. A la imagen y al texto
+*/
+
+/* Las imagenes por defecto son de inline */
+
+/* .img {
+    max-width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+/* IMAGENES RESPONSIVAS DENTRO DE UN CONTENEDOR */
+/* .img-container {
+    background-color: red;
+    line-height: 0; Fix 2. Corregir el espacio por debajo 
+} */
+
+/* .img {
+    max-width: 100%;
+    display: block; Fix 1. Corregir el espacio por debajo
+} */
+
+/* CENTRAR LAS IMAGENES, CON CONTENIDO */
+
+/*.img-container {
+    border: 1px solid red;
+    text-align: center; /para centrar si la imagen es de line/
+    background-color: lavender;
+}*/
+
+/* Si la imagen es de bloque, podemos utilizar margin-left y right para solucionar este tema */
+
+/*.img {
+    max-width: 100%;
+    /display: block;
+    margin-left: auto;
+    margin-right: auto;/
+}*/
+
+/*  CENTRAR VERTICALMENTE */
+
+/* .img-container {
+    background-color: lavender;
+} */
+
+/* La propiedad verticalalign, que por defecto es base-line, que es la línea base, con middle se centra con repecto al otro elemento, el tema es que solo funciona cuando tenemos una sola línea. */
+/* .img-container img, .img-container span {
+    vertical-align: middle;
+}
+
+.img {
+    max-width: 100%;
+} */
+
+/*  CON DISPLAY TABLE */
+/* .img-container {
+    background-color: lavender;
+    display: table;
+}
+
+.img-container span {
+    display: table-cell;
+}
+
+.img-container img, .img-container span {
+    vertical-align: middle;
+}
+
+.img {
+    max-width: 100%;
+} */
+
+/* MEJOR HACER TODO ESTO CON FLEXBOX */
+.img-container {
+    display: flex;
+    align-items: center;
+}

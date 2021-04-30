@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad | Display</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles-dist.css">
+</head>
+<body>
+    <!-- Propiedad | Display -->
+    <h1>Propiedad | Display</h1>
+    
+    <p>Con la propiedad display entramos en el concepto de layout model, nos permite definir como se va a comportar una caja con respecto a las que tienen de forma adyacente.</p>
+    
+    <p>De forma natural exiten elementos en línea y elemento de bloque.</p>
+
+    <p>Los valores de esta propiedad son:</p>
+    <ul>
+        <li><em>inline:</em> Establece que la caja se comporta como si fuera un elemento de línea.</li>
+        <li><em>block:</em> Establece que la caja se comporta como si fueta un elemento en bloque.</li>
+        <li><em>inline-block:</em> Se comportan como un elemento en línea pero acepta width y height.</li>
+        <li><em>none:</em> Lo que hace es que oculta el elemento, pero lo sigue renderizando, se tiene que utilizar con cuidado.</li>
+        <li><em>table:</em> Imita el comportamiento de una tabla.</li>
+        <li><em>list-item:</em> Imita el comportamiento de una lista.</li>
+        <li><em>CSS3:</em></li>
+        <ul>
+            <li><em>flex:</em> Maquetar componentes, por ejemplo un menu, un footer</li>
+            <li><em>grid:</em> Maquetar layout, acomodar todas las cajas/componentes creados.</li>
+        </ul>
+    </ul>
+
+    <p>Los elementos en <em>línea</em> no aceptan width ni height, aceptan margin y padding, pero solo en el eje horizontal, no en el flujo vertical.</p>
+
+    <hr>
+    <h2>Ejemplo</h2>
+    <hr>
+
+    <span class="inline">Soy un elemento en línea</span>
+    <span class="inline">Soy otro elemento en línea</span>
+    <p class="block">Soy un elemento en bloque</p>
+    
+</body>
+</html>

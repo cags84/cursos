@@ -1,0 +1,101 @@
+@charset 'UTF-8';
+@import 'normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ---------------------------------------------------- */
+/* 
+    Normalmente necesitamos resetear los estilos por defecto de una lista
+        margin-top:0;
+        margin-bottom:0;
+        padding-left:0;
+
+    Hay tres propiedades para las listas, se pueden aplicar al padre o a los elementos de la lista
+
+    list-style-type: Establece el estilo de viñeta
+        disc
+        circle
+        square
+        decimal
+        decimal-leading-zero
+        lower-roman
+        upper-roman
+        lower-greek
+        lower-latin
+        upper-latin
+        armenian
+        georgian
+        lower-alpha
+        upper-alpha
+
+    list-style-position: Hace que las viñetas se coloquen por dentro o por fuera del elemento
+        outside | inside
+        
+    list-style-image: Pone una imagen en lugar de la viñeta, no se suele utilizar porque hay formas mucho más eficientes de hacerlo
+        url(imagen)
+
+    Normamente se suele usar el shorthand list-style
+*/
+
+/* 1. list-style-type */
+.list {
+    /*viene por defecto*/
+    /* list-style-type: disc;  */
+    /* list-style-type: circle; */
+    /* list-style-type: square; */
+    /* Cambia el comportamiento */
+    /* list-style-type: decimal;  */
+    /* list-style-type: decimal-leading-zero; */
+    /* list-style-type: lower-roman; */
+    /* list-style-type: upper-latin; */
+    /* list-style-type: lower-latin; */
+    /* Poner una imagen a los elementos de las lista */
+    /* No es muy buena idea. */
+    /* list-style-image: url(/src/assets/img/check.png);  */
+
+}
+
+/* 
+.list {
+    list-style: none;
+} */
+
+/* .list__item::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url(/src/assets/img/check.png);
+    background-position: center; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 1em;
+} */
+
+/* .list__item {
+    background-image: url(/src/assets/img/check.png);
+    background-position: 0 0; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 2em;
+} */
+
+/* RESETEAR LOS ESTILOS DE LAS LISTAS EN CSS */
+.list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.list__item {
+    float: left;
+    padding-right: 1em;
+}

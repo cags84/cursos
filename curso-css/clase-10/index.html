@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <!-- Estilos de CSS -->
+    <link rel="stylesheet" href="styles-dist.css">
+</head>
+<body>
+    <!-- Position -->
+    <h1>Position</h1>
+    <h2>Flujo de HTML y la propiedad position en CSS</h2>
+    <p><strong>Position</strong> es la propiedad que nos permite modifica el flujo de HTML, El flujo en HTML es el orden en el que aparecen los elementos.</p>
+
+    <p>los valores de <em>position</em> son:</p>
+    <ul>
+        <li>Static (Valor por defecto)</li>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+    </ul>
+    <p>Si creamos el elemento y no le aplicamos algunas de estas opciones (relative, absolute, fixed, sticky), se dice que el elemento no esta posicionado, por defecto es static y se considera que no esta posicionado.</p>
+    <h2>Importante</h2>
+    <p>Cuando un elemento se posiciona podemos moverlo en los 3 ejes:</p>
+    <ul>
+        <li>
+            <strong>top:</strong> Podemos mover el elemento en relación a la parte superior
+        </li>
+        <li>
+            <strong>right:</strong> Podemos mover el elemento en relación a la parte derecha.
+        </li>
+        <li>
+            <strong>bottom:</strong> Podemos mover el elemento en relación a la parte inferior.
+        </li>
+        <li>
+            <strong>left:</strong> Podemos mover el elemento con respecto a la parte izquierda.
+        </li>
+        <li><strong>z-index:</strong> Podemos mover el elemento en el eje Z</li>
+    </ul>
+
+    <p><strong>Nota:</strong> Si dos elementos se solapan, osea que un elemento aparece por encima de otro, podemos utilizar <em>z-index</em>, para poder decirle cual debe aparecer primero.</p>
+
+    <hr>
+
+    <h2>Ejemplo</h2>
+
+    <h2 class="title">Atributo position</h2>
+    <p class="parrafo-1 ejemplo">Este es el primer párrafo</p>
+    <p class="parrafo-2 ejemplo">Este es el segundo párrafo</p>
+
+</body>
+</html>

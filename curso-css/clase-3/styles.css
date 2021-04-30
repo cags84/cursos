@@ -1,0 +1,44 @@
+@charset 'UTF-8';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+
+/* Herencia */
+
+/*
+    [Propiedad inherit]
+    Le decimos que herede del papa, la propiedad que estemos especificando
+*/
+
+p {
+    color: black;
+}
+
+a {
+    color: inherit; /* Va a heredar el color del el elemento padre */
+}
+
+/* Cascada y Especificidad */
+
+/*
+    [Especificidad]
+    La cascada va ligada directamente con la especifidad.
+
+    La especifidad entra en juego cuando hay conflicto de estilos y no se resuelve por cascada, en otras palabras la especificada gana a la cascada.
+
+    [Etiqueta                    -> 1        -> 0001]
+    [Clases y pseudoclases       -> 10       -> 0010]
+    [ID                          -> 100      -> 0100]
+    [Estilos en linea            -> 1000     -> 1000]
+    !important                   -> Gana a todo
+
+    El orde es: !important -> especificada -> cascada
+*/
+
+p { color: rgb(70, 70, 58); } /* peso de 1*/
+.parrafo { color: red; } /* peso de 10 */
+#parrafo { color: lightseagreen; } /* 100 */

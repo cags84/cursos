@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ----------------------------------------- */
+
+/* 
+    Variables CSS
+*/
+
+:root {
+    --color: blue;
+}
+
+article {
+    color: var(--color);
+}
+
+.article {
+    --color: green;
+}

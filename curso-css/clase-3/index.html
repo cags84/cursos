@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidad, herencia y cascada</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles-dist.css">
+</head>
+<body>
+    <h1>Especificidad, herencia y cascada</h1>
+    <hr>
+    <p><strong>La herencia</strong> se aplica con el valor inherit, esto obliga al elemento a heredar la propiedad de su elemento mñas cercano</p>
+    <p><strong>La cascada,</strong> es el orden en el que se le aplicarán los estilos al ir leyendo el css. Los estilos que vienen después sobreescriben a los anteriores.</p>
+    <p><strong>La Especificidad,</strong> es el peso que tiene un selector cuando hay conflicto de estilos, el conflito de estilos se da cuando a un mismo elemento le estamos dando estilos de dos formas distintas, se aplicará la especifidad para solucionar el conflito.</p>
+    <ul>
+        <p>La <em>w3c</em> divide la especificidad en:</p>
+        <ul>
+            <li>Etiqueta:                   0,0,0,1</li>
+            <li>Clases y pseudoelementos:   0,0,1,0</li>
+            <li>ID:                         0,1,0,0</li>
+            <li>Estilos en línea:           1,0,0,0</li>
+            <li>!important:                 Gana a todo</li>
+        </ul>
+    </ul>
+    <hr>
+
+    <h2>Herencia</h2>
+    <p>Estamos viendo la <a href="#">herencia</a> en css</p>
+
+    <h2>Cascada</h2>
+    <p>La cascada va ligada directamente con la especifidad.
+        La especifidad entra en juego cuando hay conflicto de estilos y no se resuelve por cascada, en otras palabras la especificada gana a la cascada
+    </p>
+    <hr>
+    <p>Vamos a trabajar con cascada, parrafo 1</p>
+    <p class="parrafo">Vamos a trabajar con cascada, parrafo 1</p>
+    <p id="parrafo" class="parrafo">Vamos a trabajar con cascada, parrafo 1</p>
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title>
+    <!-- Estilos CSS -->
+    <style>
+        col:nth-child(1) {
+            background-color: brown;
+        }
+        col:nth-child(2) {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tablas con HTML -->
+    <h1>Tablas con HTML</h1>
+    <p>El número de celdas dentro de un tr, va a establecer el número de columnas dentro de una tabla.</p>
+
+    <br>
+    <table>
+        <caption>HORARIO DE LAS CLASES</caption>
+        <colgroup>
+            <col span="5">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th>L</th>
+                <th>M</th>
+                <th>X</th>
+                <th>J</th>
+                <th>V</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>8:30 - 9:30</td>
+                <td>Matemáticas</td>
+                <td>Matemáticas</td>
+                <td>Sociales</td>
+                <td>Matemáticas</td>
+                <td>Matemáticas</td>
+            </tr>
+            <tr>
+                <td>9:30 - 10:25</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Matemáticas</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+            </tr>
+            <tr>
+                <td>10:25 - 11:20</td>
+                <td>Educación Fisica</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Educación Fisica</td>
+            </tr>
+            <tr>
+                <td>10:25 - 11:20</td>
+                <td colspan="5">RECREO</td>
+            </tr>
+            <tr>
+                <td>10:25 - 11:20</td>
+                <td>Educación Fisica</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Educación Fisica</td>
+            </tr>
+            <tr>
+                <td>10:25 - 11:20</td>
+                <td>Educación Fisica</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td rowspan="2">Educación Fisica</td>
+            </tr>
+            <tr>
+                <td>10:25 - 11:20</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Educación Fisica</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Total de asignaturas</td>
+                <td colspan="1">12</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

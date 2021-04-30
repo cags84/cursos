@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ------------------------------------------------------- */
+
+.title::first-letter { /* Afecta a la primera letra, solo afecta a los elemento del bloque. */
+    color: red;
+    font-size: 2em;
+}
+
+.text::first-line { /* Afecta a la primera línea del párrafo, con respecto al cambio del viewport, solo funciona para elementos de bloque */
+    color: blue;
+}
+
+.text::selection { /* Da estilos a lo que el usuario selecciona dentro del párrafo donde se aplicaron los estilos. */
+    color: red;
+    background-color: white;
+}
+
+/* Los pseudoelementos no existen en el documento ::before, se aplica antes y ::after, se aplica despues del elemento, en el content se puede dibijar casi todo lo que quieras. {imagenes, etc.} */
+
+/* Como son elementos en línea, si queremos dibujar algo con ellos, les tenemos que colocar la propiedad inline-block. */
+.dolar::before {
+    display: inline-block;
+    content: '$';
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.dolar::after {
+    content: '.00';
+}
+
+.inline {
+
+}

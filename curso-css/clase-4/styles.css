@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ /**
+  * Agremos estilos propias
+  */
+  /* FIX - Ancho de las imagenes */
+  img {
+    max-width: 100%;
+  }

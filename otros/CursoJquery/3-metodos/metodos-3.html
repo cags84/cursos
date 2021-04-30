@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery - Metodos 3</title>
+</head>
+<body>
+
+	<p id="texto">texto de ejemplo</p>
+
+	<!-- Jquery -->
+	<script src="../js/jquery-1.11.3.min.js"></script> 
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Metodos append[añade al final]. 
+			$('p#texto').append(' Este es el nuevo ejemplo.')
+			// Metodos prepend[añade al inicio].
+			$('p#texto').prepend('Un ')
+			// Metodos after[añade al inicio].
+			$('p#texto').after('<p>Estamos por fuera del parrafo</p>')
+			// Metodos before[añade al inicio].
+			$('p#texto').before('<p>Antes del elemento</p>');
+		});
+	</script>	
+</body>
+</html>

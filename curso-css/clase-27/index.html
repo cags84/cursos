@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en CSS</title>
+    <!-- Enlaces CSS -->
+    <link rel="stylesheet" href="dist/css/styles.css">
+</head>
+<body>
+    <!-- Tablas en CSS -->
+    <h1>Tablas en CSS</h1>
+    <p></p>
+
+    <hr>
+    <h2>Ejemplo</h2>
+    <p>Para hacer una tabla resposiva, lo que se suele hacer es encerrar la tabla con un div, con una clase que en este caso puede ser la clase .container, y al table.container le vamos a dar un overflow-x: auto, esto genera una barra de scroll para ello.</p>
+    <hr>
+    
+    <div class="table-container">
+        <table class="table">
+            <caption>Avengers</caption>
+            <colgroup>
+                <col class="col1">
+                <col class="col2">
+                <col class="col3">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th class="table__head">Username</th>
+                    <th class="table__head">Email</th>
+                    <th class="table__head">Company</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table_row">
+                    <td class="table__data">TonyStark</td>
+                    <td class="table__data">tonystark@gmail.com</td>
+                    <td class="table__data">Marvel</td>
+                </tr>
+                <tr class="table_row">
+                    <td class="table__data">BruceBanner</td>
+                    <td class="table__data">bricebanner@gmail.com</td>
+                    <td class="table__data">Marvel</td>
+                </tr>
+                <tr class="table_row">
+                    <td class="table__data">PeterParker</td>
+                    <td class="table__data">spiderman@gmail.com</td>
+                    <td class="table__data">Marvel</td>
+                </tr>
+                <tr class="table_row">
+                    <td class="table__data">SteveRogers</td>
+                    <td class="table__data"></td>
+                    <td class="table__data">Marvel</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit neque vel ipsa quia architecto aliquam suscipit quod eaque. Aut, culpa. Qui illo atque placeat voluptates alias sequi saepe eum explicabo.</p>
+
+</body>
+</html>

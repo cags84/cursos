@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoelementos</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles-dist.css">
+</head>
+<body>
+    <!-- Pseudoelementos -->
+    <h1>Pseudoelementos</h1>
+    <p>Se utilizan para dar estilos a una parte especifica de un elemento.</p>
+    <p>La sintaxis es:
+        <code>
+            <em>selector::pseudoelemento{ estilos_a_aplicar }</em>
+        </code>
+    </p>
+    <p>Lo de usar <em>::</em> (dos puntos doble) es algo que vino en CSS3, para diferenciarlos de las pseudoclases, que se denotan con <em>:</em> (:)</p>
+
+    <p>Existen 5 Pseudoelementos:</p>
+    <ul>
+        <li><em>::first-line</em> (elementos de bloque), sirve para seleccionar la primera línea</li>
+        <li><em>::first-letter (elementos de bloque), sirve para seleccionar la primera letra</em></li>
+        <li>::selection (retirado de la especicación)</li>
+        <li>Las propiedades ::before, ::after, son particulares:</li>
+        <ul>
+            Necesitan la propiedad content es obligatoria y son elemento de línea, por defecto, son hijos del elemento al que pertenecen. 
+            <li>::before</li>
+            <li>::after</li>
+        </ul>
+    </ul>
+
+    <p>::after, ::before, son elementos que no existen en el HTML y que por consecuencia no existe en el DOM, los pseudoelementos no pertenecen al DOM, ::before se coloca antes del elemento y ::after se coloca despues del elemento.</p>
+
+    <p>Taller de pseudoelementos <a href="https://www.youtube.com/watch?v=VxVfuMkMpJI" target="__blank">Aquí</a></p>
+
+    <hr>
+    <h2>Ejemplo</h2>
+    <hr>
+
+    <h2 class="title">Pseudoelementos</h2>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quos? Harum sint quis maiores dolorem qui tempora et nobis nemo iure obcaecati odit quidem quo, quod quos quibusdam sapiente animi.</p>
+    <p class="dolar">5</p>
+    <span class="inline">Soy un elemento de línea</span>
+
+
+</body>
+</html>

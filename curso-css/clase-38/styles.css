@@ -1,0 +1,73 @@
+/* 
+Flexbox
+    Alineamiento
+    Estas propiedades para alinear se aplican SIEMPRE al flex-container
+    Existen propiedades para el main-axis y para el cross-axis
+    main-axis:
+        justify-content: flex-start(default) | center | space-between | space-around | space-evenly | flex-end
+        flex-start alinea los elementos al principio del main axis
+        center centra los elementos en la mitad del main axis
+        flex-end alinea los elementos al final del main axis
+        space-between distribuye los items a la misma distancia y no deja espacio exterior ni el primer ni el último flex-end.
+        
+        space-around distribuye los items a la misma distancia y deja un espacio exterior en el primero y en el último flex-item
+        space-evenly distribuye los items y los espacios exteriores del primer y último flex-item dejando la misma distancia entre todos.
+    cross-axis
+        align-items: Una sola línea.
+            flex-start | center | flex-end | stretch(default) | baseline
+        align-content:varias líneas
+            flex-start | center | flex-end | stretch(default) | baseline
+        align-self: Se aplica al flex-item. Sirve para alinear un elemento en concreto en el cross-axis
+    TRUCO EXTRA: Al utilizar auto con la propiedad margin lo que sucede es que el elemento se va al lado contrario del margen que dimos, si ponemos margin:auto el elemento se centra completamente, tanto vertical como horizontalmente
+*/
+
+@charset 'UTF-8';
+@import 'normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ------------------------------------------------------- */
+
+.flex-container {
+    background-color: #FCA17D;
+    padding: .5em 0;
+    margin-top: 1em;
+
+    /* Display flex */
+    display: inline-flex;
+    display: flex;
+
+    /* Las propiedades de dirección siempre se le aplican al contendor con display flex. */
+    /* flex-direction, modifica la dirección y cual es el eje principal. */
+
+    /* flex-direction: row; */ /* valor por defecto, dirección horizontal de izq a derecha. */
+    /* flex-direction: row-reverse; */ /* dirección horizontal de derecha a izquierda. */
+    /* flex-direction: column; */ /* modifica la dirección por defecto al eje vertical de arriba abajo. */
+    /* flex-direction: column-reverse; */ /* modifica la dirección por defecto al eje vertical de abajo a arriba. */
+
+    /* Volvemos a setear el valor por defecto. */
+    /* flex-direction: row; */
+
+    /* flex-wrap, controla si los elementos saltaran de línea o no.  */
+    flex-wrap: nowrap; /* Es el valor por defecto, lo que va hacer es que todos elementos se queden en la misma línea. */
+    flex-wrap: wrap; /* Modificamos la propiedad, ahora los elementos van a saltar de línea. */
+    flex-wrap: wrap-reverse; /* Modificamos la propìedad, ahora los elementos pero de forma inversa */
+
+}
+
+.flex-item {
+    width: 30px;
+    height: 30px;
+    margin: .5em;
+    line-height: 30px;
+    color: aliceblue;
+    text-align: center;
+    background-color: #9A348E;
+}

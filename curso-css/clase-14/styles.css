@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* --------------------------------------------------- */
+
+body {
+    /*padding-top: 3.5em;*/ /* Para que el menu, posicionado con fixed no tape el resto de contenido que sube a ocupar el contenido */
+}
+
+.menu {
+    width: 100%;
+    background-color: lightseagreen;
+    font-size: 2em;
+    padding: .5em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.title {
+    /* margin: 0; */
+}
+
+.texto {
+
+}
+
+.slide {
+    width: 100%;
+    height: 300px;
+    background-color: grey;
+    font-size: 3em;
+    text-align: center;
+    line-height: 6em;
+
+}

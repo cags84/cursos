@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido embebido</title>
+</head>
+<body>
+    <!-- 
+        DPR (Device Pixe Ratio)
+            Es una relación que existe entre los píxeles reales que tiene el disposiitovo y los pixeles que tenemos disponibles para "pintar" contenido
+
+        DPR = Pixeles reales / pixeles disponible
+     -->
+</body>
+
+    <h1>Contenido embebido</h1>
+    <!-- <img src="img/php.svg" alt=""> -->
+
+    <p>Cargar la imagen dependiendo del tamaño del dispositivo</p>
+    <!-- <img srcset="img/PHP-Transparent-PNG.png, img/PHP-Transparent-PNG.webp 2x"> -->
+
+    <h2>Picture</h2>
+
+    <picture>
+        <source srcset="img/PHP-Transparent-PNG.webp" media="(max-width:1200px)">
+        <img src="img/PHP-Transparent-PNG.png">
+    </picture>
+
+</html>

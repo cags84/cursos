@@ -1,0 +1,114 @@
+@charset 'UTF-8';
+
+/* Selectores básico */
+
+/*
+    [Selectore universales]
+    Son recomendable solo para resetear los estilos del todo el navegador, no se deben utilizar para dar estilos especificos, dado que se aplican a todos los los elementos del documento web.
+*/
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* 
+    [Selectores de etiquetas]
+    p {}, el tema es que no se recomienda porque altera la especifidad, dado que se aplican a todos los elemtos del mismo tipo que el selector.
+*/
+
+h1 {color:cadetblue}
+p{color:cadetblue}
+
+/*
+    [Selectores de clases]
+    .nombre_clase { propiedad: valor; } -> Es el más recomendado, el que se debe utilizar siempre, si todo los manejamos con clase no afecta la especficidad dado que todas van a ser las mismas, y se hacen reutilizables las clases.
+*/
+
+.title { color: red }
+.parrafo {color:brown }
+
+/*
+    [Selectores de id]
+    #nombre_id {propiedad:valor} , no se recomiendan para dar estilos, se debe utilizar para javascript y este tipo de selector no se puede reutilizar en el documento html, por lo cual no ayudaría para manejas menos código.
+*/
+
+#title-2 {color:blue;}
+#parrafo-2 {color:burlywood;}
+
+/*
+    [Selectores de atributos]
+    Seleccionar a través del atributo, el atributo lo colocamos a través de los corchetes.
+*/
+
+[href] { /* Todos los elementos que tengan ese atributo que tengan href*/
+    color: green;
+}
+
+[href="#"] { /* Todos los elementos que tengan ese atributo y que tengan href y ese valor*/
+    color: red;
+}
+
+[class~="verde"] { /* Todos los elementos que tengan ese atributo y que tengan href y ese valor una vez */
+    color: goldenrod;
+}
+
+[class|="verde"] { /* Todos los elementos que tengan ese atributo y exactamente ese valor o empiece por el valor seguido de un guión */
+    color: indigo;
+}
+
+[class^="rojo"] { /* Elemtnos que empiecen por el atributo que le estamos dando */
+    color: blue;
+}
+
+[class$="rojo"] { /* Elementos que acaben por el atributo que le estamos dando */
+    color: blueviolet;
+}
+
+[class*="rojo"] { /* Elementos que tienen ese atrinuto y contengan ese valor, independientemente en que orden este */
+    color: yellow;
+}
+
+
+/* Selectores combinadores */
+
+/*
+    [Selector de hermano adyacente]
+    Seleccionar a un hermano que este justo debajo de él, el estilo se aplica al hermano inferior en el arbol.
+*/
+
+h1 + h2 { /* En este caso h2 es hermano y esta juto debajo de h1 */
+    color: blueviolet;
+}
+
+h2 + h2 {
+    color: crimson;
+}
+
+/* 
+    [Selector de hermano general]
+    Buscar|Selecciona a todos los hermanos independientemente del orden que compartan el mismo padre, que esten por debajo del él, en el arbol.
+*/
+
+h1 ~ h3 { /* Hermanos que comparten el mismo padre, no importa el orden, en este caso el padre es el body */
+    color: darkmagenta;
+}
+
+/*
+    [Selectores descendentes]
+    A todos los elementos que sean hijos del primer elemento de la regla, este selector le aplica a todos los hijo que span que esten dentro de un p.
+*/
+
+p span { /* A todos los span que sean hijos de un p */
+
+}
+
+/*
+    [Selector de hijo directo]
+
+*/
+
+p > span { /* El span debe ser hijo directo de p */
+    color: blueviolet;
+}

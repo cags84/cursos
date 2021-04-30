@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios - Input tipo radio</title>
+</head>
+<body>
+    <!-- Input tipos radio -->
+    <h1>Input de tipo radio</h1>
+
+    <form action="#">
+        <div>
+            <h2>Input de tipo 'radio'</h2>
+            <label>
+                Hombre
+                <input type="radio" name="genero" value="m" checked>
+            </label>
+            <label>
+                Mujer
+                <input type="radio" name="genero" value="f">
+            </label>
+            <label>
+                No especificado
+                <input type="radio" name="genero" value="ne">
+            </label>
+        </div>
+
+        <div>
+            <h2>Input de tipo checkbox</h2>
+            <label>
+                HTML
+                <input type="checkbox" value="html">
+                CSS
+                <input type="checkbox" value="css">
+                JavaScript
+                <input type="checkbox" value="javascript">
+                PHP
+                <input type="checkbox" value="php">
+            </label>
+        </div>
+
+        <div>
+            <h2>Elementos seleccionables - Select</h2>
+            <select name="lenguajes" multiple> <!-- con el atributo multiple podemos seleccionar más de un valor -->
+                <option value="0">Selecciona una opción</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="php">PHP</option>
+            </select>
+        </div>
+
+        <div>
+            <h2>Elementos seleccionables - Select avanzado</h2>
+            <select name="mascotas">
+                <option value="0">Selecciona una opción</option>
+                <optgroup label="4 patas">
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                    <option value="hamster">Hamster</option>
+                    <option value="conejo">Conejo</option>
+                </optgroup>
+                <optgroup label="aves">
+                    <option value="loro">Loro</option>
+                    <option value="canario">Canario</option>
+                </optgroup>
+                <optgroup label="otros">
+                    <option value="serpiente">Serpiente</option>
+                    <option value="tarantula">Tarantulo</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div>
+            <h2>Datalist, incluyen un filtro</h2>
+            <input type="list" list="pets">
+            <datalist id="pets">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="hamster">Hamster</option>
+                <option value="conejo">Conejo</option>
+                <option value="loro">Loro</option>
+                <option value="serpiente">Serpiente</option>
+                <option value="tarantula">Tarantulo</option>
+            </datalist>
+        </div>
+
+    </form>
+</body>
+</html>

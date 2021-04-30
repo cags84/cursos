@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Practica Formulario</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card__left">
+            <img src="assets/img/logo.png" alt="Logo">
+        </div>
+        <div class="card__right">
+            <h1 class="card__title">contact</h1>
+            <form action="#" class="form">
+                <div class="form__names">
+                    <div class="form__field">
+                        <label for="name" class="form__label">first name</label>
+                        <input type="text" id="name" name="name" class="form__input">
+                    </div>
+                    <div class="form__field">
+                        <label for="surname" class="form__label">last name</label>
+                        <input type="text" id="surname" name="surname" class="form__input">
+                    </div>
+                </div>
+                <div class="form__field">
+                    <label for="email" class="form__label">email</label>
+                    <input type="email" name="email" class="form__input">
+                </div>
+                <div class="form__field">
+                    <label for="message" class="form__label">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10" class="form__textarea"></textarea>
+                </div>
+                <input type="submit" value="send" class="form__submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

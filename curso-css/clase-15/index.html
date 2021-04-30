@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position | z-index</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles-dist.css">
+</head>
+<body>
+    <!-- Position | z-index -->
+    <h1>Position | z-index</h1>
+    <p>Es para mover las cajas en el eje z, nos permite modificar el orden de las capas en el eje z (profundidad).</p>
+    <p>Admite valores positivos y negativos.</p>
+    <p>Es recomendable usar valores no consecutivos, es mejor utilizar rango amplios -> 100, 200, 300</p>
+    <p>Si el padre tiene z-index declarado no podremos poner a un hijo por encima</p>
+
+    <br>
+
+    <h2>Ejemplo</h2>
+
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+
+    <hr>
+
+    <div class="padre">
+        <div class="hijo">Hijo</div>
+    </div>
+
+</body>
+</html>

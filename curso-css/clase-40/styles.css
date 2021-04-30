@@ -1,0 +1,111 @@
+/* 
+Flexbox
+    Propiedad flex: Es un shorthand que engloba las siguientes propiedades.
+        Todas las medidas se establecen en función del espacio disponible en el contenedor.
+        Todas las propiedades van en función del MAIN-AXIS.
+        flex-grow: Establece qué hacer cuando hay espacio sobrante. Cuantas divisiones coge el elemento. El valor es un entero desde 0 hasta n o auto
+        flex-shrink:Establece qué hacer cuando no hay espacio suficiente. Cuantas divisiones pierde el elemento. El valor es un entero desde 0 hasta n
+        flex-basis: Establece cuanto tiene que ocupar el item antes de encojer o extenderse. Flex basis prevalece ante width si el main-axis es horizontal o ante height si el main-axis es vertical. El valor es un entero desde 0 hasta n
+    Los valores de flex son:
+        Por defecto es 0 1 auto
+        flex:auto; equivale a 1 1 auto;
+        flex:none; equivale a  0 0 auto;
+        flex: flex-grow(obligatiorio) flex-shrink(opcional) flex-basis(opcional);
+    Order: Establece qué orden ocupará el elemento en el contenedor flex. El valor es el "peso" respecto a los valores que tengan los otros elementos. Por defecto es 0
+    Extra:
+        Existe un shorthand para flex-direction y flex-wrap. flex-flow: flex-direction flex-wrap. flex-flow: column wrap;
+*/
+
+@charset 'UTF-8';
+@import 'normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ----------------------------------------------------- */
+
+.box {
+    width: 400px;
+    height: 300px;
+    background-color: #FCA170;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.box--item {
+    width: 200px;
+    height: 50px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.box--item:first-child {
+    background-color: purple;
+    color: white;
+}
+
+.box--item:nth-child(2) {
+    background-color: lightgreen;
+    color: white;
+}
+
+.box--item:nth-child(3) {
+    background-color: lightblue;
+    color: white;
+}
+
+.box--item:nth-child(4) {
+    background-color: lightslategrey;
+    color: white;
+}
+
+/* Flex grow, que hacer cuando hay espacio sobrante */
+/* .box--item:nth-child(2) {
+    flex-grow: 1;
+}
+
+.box--item:nth-child(3) {
+    flex-grow: 2;
+} */
+
+/* 50px -- 200px */
+
+/* flex shrink, cuando no hay espacio suficiente */
+.box--item:nth-child(2) {
+    flex-shrink: 2;
+}
+
+/* flex basis, establece cuando debe medir la propiedad antes de repartir el espacio. */
+.box--item:nth-child(4) {
+    flex-basis: 200px;
+}
+
+/* Flex basis pesa más que width, si no se establece el flex basis, toma el valor del width. */
+
+/*  flex-flow, es un shorthand a flex-direction a flex-wrap */
+
+
+
+/* Se recomienda utilizar flex en lugar de las propuedades por separado. */
+/* flex-grow 0, flex-shrink 1, auto de flex-basis.  */
+/* flex necesita al menos un valor para funcionar. */
+.box--item:nth-child(2) {
+    flex: 0 1 auto; /* Esto es lo que se recomienda por tema de rendimiento del navegador. */
+}
+
+/* ORDER */
+/* Establecemos que orden va a ocupar el elemento en el contenedor, por defecto order es 0 */
+/* Si se estable un número mayor, se va al final. */
+.box--item:nth-child(2) {
+    order: 1;
+}

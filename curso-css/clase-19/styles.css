@@ -1,0 +1,67 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* -------------------------------------------------------- */
+/* 
+    UI States
+        :enabled
+        :disabled
+        :checked
+        :in-range
+        :out-of-range
+        :required
+        :optional
+        :valid
+        :invalid
+        :fullscreen -> complejo de hacer funcionar.
+        :readonly
+        :readwrite
+*/
+
+.input, .label {
+    display: block;
+}
+
+/* :enabled, se aplica a todos los campos del formulario que esten activados, por defecto es el estado natural de un campo de un formulario. */
+
+.input:enabled {
+    background-color: red;
+}
+
+.input:disabled {
+    background-color: yellow;
+    border: none;
+}
+
+/* :checked, se utiliza bastante, dado que se pueden hacer cosas muy buenas. */
+.input:checked + label {
+    font-size: 2em;
+}
+
+
+.input:in-range {
+    background-color: aqua;
+}
+
+.input:out-of-range {
+    background-color: burlywood;
+}
+
+/* Optional: Saber si un campo es opcional, por defecto todos los campos son opcionales */
+
+.input:optional {
+    background-color: purple;
+}
+
+.input:required {
+    background-color: royalblue;
+}

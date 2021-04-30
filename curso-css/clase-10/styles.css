@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ------------------------------------------------------ */
+
+.title {
+    text-align: center;
+    font-size: 3em;
+}
+
+p.ejemplo {
+    font-size: 2em;
+}
+
+.parrafo-1 {
+    /* visibility: hidden; Ocula el elemento pero sigue el espacio sigue siendo ocupado */
+    display: none; /* Ocultamos el elemento, pero ya NO reserva el espacio reservado para mostrarlo */
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables CSS</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="dist/styles-dist.css">
+</head>
+<body>
+    <!-- Variables CSS -->
+    <h1>Variables CSS | Introducción</h1>
+    
+    <p>La espeficicación las denomina <em>CUSTOM PROPERTIES</em>, una variable es un espacio en memoria en el que guardamos un valor para poder reutilizarlo o modificarlo.</p>
+
+    <p>Las variables necesitan estar dentro de un selector.</p>
+
+    <p>Tienen herencia y cascada, funcionan igual que una propiedad css para estos casos.</p>
+
+    <p>Existe variables globales y locales, dependera del selector donde lo declaremos, una variable global significa que se puede acceder a ella desde cualquier elemento del documento del html, por ejm: :root</p>
+
+    <p>Las variables CSS no son lo mismo que las variables SCSS.</p>
+
+    <p>Su sintaxis es muy sencilla</p>
+    <code>
+        selector {
+            --nombre-variable: valor;
+        }
+    </code>
+
+    <p>Para usarla</p>
+    <code>
+        propiedad: var(--nombre-variable);
+    </code>
+    
+    <p>Ver en can i use para saber que tal esta soportado. </p>
+
+    <hr>
+    <h2>Ejemplo</h2>
+    <hr>
+
+    <h2 class="title">Variables CSS</h2>
+    <article class="main-article">
+        <p class="parrafo">Párrafo principal</p>
+    </article>
+
+    <article class="article">
+        <p class="parrafo">Otro párrafo</p>
+    </article>
+
+</body>
+</html>

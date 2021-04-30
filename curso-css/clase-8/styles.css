@@ -1,0 +1,60 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ------------------------------------------------------ */
+
+/*
+    Border
+    
+    border-width 
+        px|em|rem|%|....
+
+    border-style
+        none|hidden|dotted||dashed|solid|double|groove|ridge|inset|outset|initial|inherit;
+
+        * Estas medidas dependen del navegador *
+            - thick (ancho)
+            - medium (medio)
+            - thin (fino)
+    
+    border-color
+        css_navite|rgb|rbga|hs1|hsla|hexadecimal|trasnparent
+    
+    border-top-(width | style | color)
+    border-right-(width | style | color)
+    border-bottom-(width | style | color)
+    border-left-(width | style | color)
+*/
+
+.box1, .box2 {
+    width: 200px;
+    height: 200px;
+    margin: 2em;
+}
+
+.box1 {
+    background-color: yellowgreen;
+    /* shorthand*/
+    border: 5px solid red;
+    /* Por cascada podemos sustituir */
+    border-top: none;
+}
+
+.box2 {
+    background-color: lightseagreen;
+    /* Forma de aplicar los estilos de forma especifica */
+    border-left-width: 0.25em;
+    border-left-style: dotted;
+    border-left-color: blue;
+}

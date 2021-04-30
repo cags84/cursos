@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery - Metyodos -1</title>
+</head>
+<body>
+
+	<p id="texto">este el el primer <b>texto</b></p>
+	<p id="texto2"></p>
+	<!-- Jquery -->
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Metodos getters y setters
+			// Cuando no tiene valor se comporta como un get
+			//alert($('#texto').html());
+			// Cuando tiene valor introduce todo lo que esta entre comillas
+			$('#texto2').html('Esto es un <b>parrafo</b> 2');
+		});
+	</script> 	
+</body>
+</html>

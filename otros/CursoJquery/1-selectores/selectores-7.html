@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jqyery - Selectores 7</title>
+</head>
+<body>
+
+	<span id="caja">
+		<strong>texto simple</strong>
+		<p>texto hijo</p>
+		<p>texto hijo 2</p>
+	</span>
+
+	<!-- Jquery -->
+	<script src="js/jquery-1.11.3.min.js"></script> 
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Selectores por jerarquias, seleccion de hijos
+			$('#caja p').css('color', 'blue');
+		});
+	</script>	
+</body>
+</html>

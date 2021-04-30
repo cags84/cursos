@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles-dist.css">
+</head>
+<body>
+    <!-- Box Model -->
+    <h1>Box Model</h1>
+    
+    <p>En la web todo son cajas, al conjunto de esas cajas y la forma en la que navegador los dibuja se le denomina LAYOUT.</p>
+
+    <br>
+
+    <p>Tips: Todas la etiquetas de HTML se pueden representar con un alto y un ancho, y el navegador lo construye como cajas.</p>
+
+    <br>
+
+    <p>Las propiedades principal de cada una de estas cajas son el ancho (witdth) y el alto (heigth)</p>
+
+    <br>
+
+    <p>Existen dos tipos de elementos en HTML, los elementos en línea (inline) y los elementos en bloque (block), pero estas propiedades se pueden modificar mediante el atributo display</p>
+
+    <br>
+
+    <h2>Elementos en línea</h2>
+    <ul>
+        <li>Son elementos que sólo ocupan el espacio necesario para mostrar su contenido.</li>
+        <li>Si existen varios elementos en línea, uno se pondra al lado del otro.</li>
+        <li>No se puede modificar ni su ancho, ni su alto.</li>
+    </ul>
+    <p>Por ejemplo: a, es un elemento de línea.</p>
+
+    <br>
+
+    <h2>Elementos en bloque</h2>
+    <ul>
+        <li>Ocupan todo el ancho disponible.</li>
+        <li>Se les puede asignar ancho y alto.</li>
+    </ul>
+    <p>Siempre ocupan todo el espacio disponible y a eso se le denomina viewport</p>
+
+    <br>
+
+    <p>En el Modelo de Caja tenemos la siguiente representación:</p>
+    
+    <pre>
+    _________________________
+    |    Margin             | 
+    _________________________
+    |    Outline            |
+    _________________________
+    |    Border             |
+    _________________________
+    |    Padding            |
+    _________________________
+    |    Contenido          |
+    </pre>
+
+    <p>
+        Margin: Distancia entre un elemento y otro.
+    </p>
+
+    <hr>
+    <br>
+
+    <h2>Box Model</h2>
+    <h3>Modelo de caja</h3>
+
+    <a href="#">Enlace 1</a>
+    <a href="#">Enlace 2</a>
+
+    <hr>
+
+    <br>
+
+    <div class="box-1">Contenido 1</div>
+    <div class="box-2">Contenido 2</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* -------------------------------------------------------------------- */
+
+.contenedor {
+    width: 70%;
+    height: 300px;
+    border: 2px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    /* Ahora declaramos la position relative, por lo cual ya no esta de forma estatica y se le pueden aplicar (top, rigth, bottom, left) */
+    position: relative;
+    /* La ventaja es que si ahora movemos el contenedor, se mueve todo */
+    margin-top: 40px;
+}
+
+/* ----------------- */
+/* Esta son dos formas de hacer lo mismo */
+.box {
+    width: 60px;
+    height: 60px;
+}
+
+[class^="box"] {
+    width: 50px;
+    height: 50px;
+}
+/* ----------------- */
+
+.box1 {
+    border: 5px solid crimson;
+    position: absolute;
+    left: 0;
+    bottom: left;
+}
+
+.box2 {
+    border: 5px solid cadetblue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.box3 {
+    border: 5px solid lightcoral;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.box4 {
+    border: 5px solid lightseagreen;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.box5 {
+    border: 5px solid lightsalmon;
+    /* Como posicionar un elemento con position absolute */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+}
+
+.texto {
+    display: none;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery - Metodo 4</title>
+</head>
+<body>
+
+	<p id="texto1">texto de ejemplo 1</p>
+	<p id="texto2">texto de ejemplo 2</p>
+
+	<!-- Jquery -->
+	<script src="../js/jquery-1.11.3.min.js"></script> 
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Metodos text y css
+
+			// Text puede ser get y set, pero solo texto no html
+			//alert($('p#texto1').text());
+			$('p#texto1').text("Esto es un texto de prueba")
+
+			// Metodo css, aplique un stylo al elemento seleccionado
+			//$('p#texto2').css('color', 'red');
+			$('p#texto2').css({
+				"color":"red",
+				"font-size":"32px",
+				"border":"solid 2px black"
+			});
+		});
+	</script>	
+</body>
+</html>

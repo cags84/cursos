@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section vs article</title>
+</head>
+<body>
+    <!-- 
+        Section vs article 
+
+        section: es un contenedor genérico que agrupa contenido que está relacionado. Cuando creamos bloques cuyo contenido es parte de un bloque total usaremos section.
+
+        article: Es un contenedor que representa contenido independiente, es decir, podrmos leer ese framenti en cualquier otro sitio y tendría sentido por sí mismo.
+
+        aside: se utiliza para representar contenido relacionado pero que no forma parte del contenido principal.
+
+        Anidamiento:
+            un section puede contenide article, por ejemplo, si tenemos varios artículos que hablan sobre etiquetas HTML, deben ir dentro de un section, ya que es contenido relacionado entre sí, y los article serían contenido independiente porque podróamos leer uno sin haber leido al resto, y seguiría teniendo sentido.
+
+            El article es definido como un componente de la página de contenido independiente, esto implica que esta etiqueta puede tener un header y un footer propio.
+
+            Tambien existe el caso en el que un articulo contenga varias secciones, el articulo independiente prodría ser navegadores y contener dentro secciones como navegadores más utilizados en 2020.
+    -->
+
+    <header>
+        <h1>Noticias nacionales</h1>
+    </header>
+
+    <main>
+        <section>
+            <h1>Section como contenedor</h1>
+            <section>
+                <h2>Noticias del día</h2>
+                <article>
+                    <header>
+                        <h3>Noticia 1</h3>
+                    </header>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, aperiam! Facere, laudantium incidunt itaque beatae deleniti dolor dicta amet perferendis debitis voluptatem magni odit hic ipsum temporibus! A, id perferendis?</p>
+                    <footer>Footer de la noticia 1</footer>
+                </article>    
+                <article>
+                    <h3>Noticia 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quisquam maxime earum vero neque, soluta mollitia culpa, dolore saepe error recusandae voluptatum, velit eveniet distinctio temporibus hic corrupti similique commodi?</p>
+                </article>    
+                <article>
+                    <h3>Noticia 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, velit exercitationem! Dicta quisquam eos aut adipisci commodi reiciendis itaque consectetur, voluptatem fugit libero accusamus ducimus culpa assumenda praesentium placeat animi?</p>
+                </article>
+            </section>
+        </section>
+    </main>
+
+
+    <footer>
+        4-11-2020
+    </footer>
+
+
+    
+</body>
+</html>

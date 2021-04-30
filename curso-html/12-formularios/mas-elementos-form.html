@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios | Más elementos</title>
+</head>
+<body>
+    <h1>Más elementos de los formularios</h1>
+    
+    <form>
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text id="nombre">
+
+            <label for="apellido">Apellido</label>
+            <input type="text id="apellido">
+
+            <label for="nombre">Otro</label>
+            <input type="text id="nombre">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Tipo de perros</legend>
+            <div>
+                <select name="mascotas">
+                    <option value="0">Selecciona una opción</option>
+                    <optgroup label="4 patas">
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="conejo">Conejo</option>
+                    </optgroup>
+                    <optgroup label="aves">
+                        <option value="loro">Loro</option>
+                        <option value="canario">Canario</option>
+                    </optgroup>
+                    <optgroup label="otros">
+                        <option value="serpiente">Serpiente</option>
+                        <option value="tarantula">Tarantulo</option>
+                    </optgroup>
+                </select>
+            </div>
+    
+            <div>            
+                <input type="list" list="pets">
+                <datalist id="pets">
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                    <option value="hamster">Hamster</option>
+                    <option value="conejo">Conejo</option>
+                    <option value="loro">Loro</option>
+                    <option value="serpiente">Serpiente</option>
+                    <option value="tarantula">Tarantulo</option>
+                </datalist>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos anexos</legend>
+            <label for="imagen">Elija una imagen</label>
+            <input type="file">
+        </fieldset>
+
+        <fieldset>
+            <legend>Otras etiquetas</legend>
+            <div>
+                <label for="fuel">Meter</label>
+                <meter id="fuel" min="0" max="100" value="50" low="30" high="80" optimum="50"></meter>
+            </div>
+
+            <div>
+                <!-- representar el progreso de una tarea -->
+                <label for="task">Progreso de una tarea</label>
+                <progress id="task" max="100" value="20"></progress>
+            </div>
+
+            <br>
+            
+            <div>
+                <!-- textarea -->
+                <label for="textarea1">Este es un textarea</label> <br>
+                <textarea name="textarea1" id="textarea1" cols="30" rows="10"></textarea>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

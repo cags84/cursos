@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery - Selectores 2</title>
+</head>
+<body>
+
+	<p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nulla libero vitae voluptatum expedita sequi, ratione nobis. Impedit, inventore saepe minima tempore quibusdam consequuntur accusantium, soluta ratione animi laborum odio.</p>
+	<p class="der">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum odit consequuntur, in nostrum placeat at, ex cum praesentium explicabo dolor, hic reiciendis molestias, animi eaque pariatur asperiores sint voluptatum vitae!</p>
+	<p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nulla libero vitae voluptatum expedita sequi, ratione nobis. Impedit, inventore saepe minima tempore quibusdam consequuntur accusantium, soluta ratione animi laborum odio.</p>
+
+	<!-- Jquery -->
+	<script src="js/jquery-1.11.3.min.js"></script> 	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// Seleccion en base a la clase
+			$("p.texto").css("color", "red");
+		});
+	</script>
+</body>
+</html>

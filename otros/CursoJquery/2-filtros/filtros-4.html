@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery - Filtros 4</title>
+	<style type="text/css">
+		table {
+			width: 210px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+
+	<p>Ediciones Emi</p>
+	<p>Especialistas</p>
+	<p>En Colombia</p>
+
+	<br />
+
+	<table>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<br />
+
+	<p>Parrafo 1</p>
+	<p><a href="">Enlace</a></p>
+	<p>Parrafo 2</p>
+
+	<br />
+
+	<ul>
+		<li class="negrita">Item de la lista 1</li>
+		<li>Item de la lista 2</li>
+		<li class="negrita">Item de la lista 3</li>
+		<li class="negrita">Item de la lista 4</li>
+		<li>Item de la lista 5</li>
+	</ul>
+
+	<!-- Jquery -->
+	<script src="../js/jquery-1.11.3.min.js"></script> 
+	<script type="text/javascript">
+		$('p:contains(En)').css('background', '#9cf');
+		// Busque elementos vacios
+		$('td:empty').css("background", 'green');
+		$('p:has(a)').css('background', '#9cf');
+		// los []. aplica al atributo
+		$('li[class]').css('font-style','oblique');
+	</script>	
+</body>
+</html>

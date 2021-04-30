@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología BEM - css</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles-dist.css">
+</head>
+<body>
+    
+    <!-- Metodología BEM -->
+    <!-- <p>Una metodología en CSS son una serie de consejos para estructurar nuestras clases de una forma sencilla, escalable y reutilizable.
+    </p>
+    <p>BEM es una de las metodologías más utilizadas en el mundo.</p>
+    <p>Su nombre viene de las siblas <em>Block, Element, Modifier</em></p>
+
+    <ul>
+        <li>Block (bloque), Es cualquier elemento autónomo aislado de nuestro documento. Un menú, una galería, un formulario, etc.</li>
+        <li>Elemento (elemento), Es cada uno de los elementos del bloque. Un link, una foto, un campo de texto, etc.</li>
+        <li>Modifiet (Modificadores), Cuando un bloque se repite en otro lugar de nuestra web pero con alguna modificación. El color del texto, el tamaño de la fuente, etc.</li>
+    </ul>
+
+    <p>La forma de escribir en BEM, los <strong>bloques</strong> se suelen denominar con una sola palabra o con dos palabras separadas con un guion (-) si pueden existir conflictos de estilos, por ejemplo:</p>
+    <br>
+    <hr>
+    <ul>
+        <li>.menu / .main-menu</li>
+        <li>.gallery / .main-gallery</li>
+    </ul>
+
+    <hr>
+
+    <p>Los <strong>elementos</strong> se nombran con el nombre del bloque al que pertenecen y su nombre con dos guiones bajos (__), por ejemplo:</p>
+    <ul>
+        <li>.menu__item / .main-menu__link</li>
+        <li>.gallery__img / .main-gallery__item</li>
+    </ul>
+
+    <hr>
+
+    <p>Los <strong>modificadores</strong> se nombrab con el nombre del bloque al que pertenecen y su modificado con dos guiones medios (--), por ejemplo:</p>
+
+    <ul>
+        <li>.menu__item--active</li>
+        <li>.gallery__item--special</li>
+    </ul> -->
+
+    <h1 class="main-title">Metodología BEM</h1>
+
+    <header class="header">
+        <nav>
+            <ul class="main-menu">
+                <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Item 1</a></li>
+                <li class="main-menu__item">
+                    <a class="main-menu__link main-menu__link--active" href="#">Item 2</a></li>
+                <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Item 3</a></li>
+                <li class="main-menu__item">
+                    <a class="main-menu__link" href="#">Item 4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main"></main>
+
+    <footer class="footer">
+
+    </footer>
+
+    <br>
+</body>
+</html>

@@ -1,0 +1,103 @@
+@charset 'UTF-8';
+@import 'normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ---------------------------------------------------------------- */
+/* 
+    table-layout: Define como se comportan las dimensiones de una tabla y los anchos de las "columnas"
+        automatic: valor por defecto
+        fixed: necesita un width declarado, si no se le da un ancho a cada columna se ditribuyen equitativamente
+    caption-side: define donde se coloca el caption de una tabla.
+        top: valor por defecto
+        bottom: se coloca al pie de la tabla
+    
+    border-spacing: Controla el espacio entre las celdas
+        recibe una medida en cualquier unidad 
+    border-collapse: Controla si las celdas se mantienen juntas o separadas.
+        separate: valor por defecto
+        collapse: junta las celdas para no
+    
+    empty-cells: Controla qué hacer con las celdas vacías
+        show: valor por defecto
+        hide: oculta las celdas vacías
+*/
+
+/* .table{
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+} */
+
+/* .table{
+    caption-side: bottom;
+} */
+
+/* IMPORTANTE, hay que entender que las tablas tienen su propio formato, que hay cosas que no podemos hacer normal para dar formato a estas. */
+
+/* Nosotros queremos que los espacios se distribuyan de forma equitativa, para esto tenemos table layout, que por defecto esta puesto en automatic, pero tenemos otras opciones como fixed, donde debemos tener declarado un width. */
+
+.table {
+    /* Con estos parámetros, ahora la tabla ocupa un 70% del espacio dispobible, pero como no cabe se esta montando uno sobre el otro. */
+    /* table-layout: fixed;
+    width: 100%;
+    text-align: center; */
+    /* /table-layout */
+}
+
+/* Cambiar la posición del caption-side */
+/* .table {
+    caption-side: bottom;
+} */
+
+/*  border-spacing, espacio entre las celdas, parece un padding. */
+
+.table, .table__head, .table__data {
+    /* border-spacing: 40px; */
+/*     border: 1px solid black;
+ */}
+
+.table {
+/*     margin-left: auto;
+    margin-right: auto;
+ */}
+
+/* border-spacing, ya queda destruido con esta propiedad. */
+.table {
+    /* border-collapse: collapse; */
+}
+
+
+/*  empty-cell, que se hace con las celdas que estan vacías */
+.table__data {
+/*     background-color: green;
+    empty-cells: hide;
+ */}
+
+
+ /* Hacer un tabla responsiva */
+
+ .table {
+     width: 100%;
+     empty-cells: hide;
+ }
+
+ .table, .table__head, .table__data {
+     border: 1px solid black;
+     border-spacing: 10px;
+ }
+
+ .table__data {
+     background-color: lightblue;
+ }
+
+ .table-container {
+     overflow-x: auto;
+ }

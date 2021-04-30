@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* --------------------------------------------------------------- */
+
+.inline {
+    display: inline-block; /* Con este cambiamos el comportamiento dce inline, nos da lo mejor de las dos propiedades */
+    height: 400px; /* Es posible por inline-block*/
+    background-color: lime;
+    margin-bottom: 3em; /* No se aplica con elemento de línea, el flujo en vertical */
+    margin-right: 3em;
+}
+
+/* Los elementos de bloque, pueden acceder a todas las propiedades del box-model y afectan al flujo de los elementos. */
+
+.block {
+    display: none; /* Para ocultar el elementos, pero si se renderiza en el navegador, se debe tener cuidado, es solo utilizar cuando por requisitos de la página se deben mostrar elementos de forma dinamica, desaparece su espacio en el flujo. */
+    background-color: yellow;
+    margin-top: 3em;
+}

@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fix [img]*/
+img {max-width: 100%}
+
+/*-----------------------------------------------------------------*/
+
+h2 {
+    background-color: lightblue;
+    width: 100px;
+    height: 150px;
+}
+
+h3 {
+    background-color: purple;
+    width: 150px;
+}
+
+a {
+    background-color: lime;
+    /* Para dar ancho y alto debo cambiar la propiedad display: inline-block */
+    width: 300px; /* No funciona en elementos de línea */
+    height: 50px; /* No funciona en elementos de línea */
+}
+
+.box-1 {
+    width: 200px;
+    height: 200px;
+    background-color: lime;
+    padding: 10px;
+    border: 2px solid #ccc; /* Border, sus dimensiones si cuenta como tamaño de caja */
+    margin: 20px;
+    outline: 2px solid blue; /* Esta propiedad es similar al border, pero con la diferencia que no separa a las cajas una de las otras, sus dimensiones no cuentan para el tamaño de la caja, se suele utilizar para localizar elementos, viene muy bien porque no te va empujar ningún elemento. */
+}
+
+.box-2 {
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+}

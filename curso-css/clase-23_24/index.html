@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textos y tipografías en CSS</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="dist/assets/css/styles-dist.css">
+</head>
+<body>
+    <!-- Textos y tipografías en CSS -->
+    <h1>Textos y tipografías en CSS</h1>
+    <p>Por normal general el texto es más abundante que las imagenes.</p>
+    <h2>Tipografía</h2>
+    <p>A los tipos de letras que existen se les denomina fuentes o tipografía.</p>
+    <p>Podemos dividir en dos grupos:</p>
+    <ul>
+        <li><em>Familias tipográficas:</em> Fuentes específicas con nombre (Arial, Times New Romas,etc..</li>
+        <li><em>Familias genericas:</em> Reciben su nombre en función de sus carácteristicas (serif, san-serif, cursive, monospace, etc....</li>
+    </ul>
+
+    <p>Cuando elegimos una fuente denemos poner fuentes de reserva-</p>
+    <code>
+        body {
+            font-family: 'fuente', fallback1, fallback2;
+        }
+    </code>
+
+    <p>Las propiedades para cambiar el estilos de la fuentes son varias:</p>
+    <ul>
+        <li>font-family</li>
+        <li>font-size</li>
+        <li>font-weight</li>
+        <li>font-style</li>
+        <li></li>
+        <li>text-transform, todo en mayus o mini...</li>
+        <li>text-align, aliniamiento del texto</li>
+        <li>text-decoration, subrayado, tachado....</li>
+        <li>text-indent, indentación para temas esteticos</li>
+        <li>line-height, establece el alto de línea</li>
+        <li>letter-spacing, establece la separación entre las letras.</li>
+    </ul>
+
+    <hr>
+    <h2>Ejemplo</h2>
+    <hr>
+
+    <h2 class="title">Tipografía y textos</h2>
+    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor at quo obcaecati quas alias. Labore, quasi eligendi debitis praesentium, eos facilis ut, assumenda dignissimos recusandae minima dicta! Quisquam, officiis quibusdam.</p>
+    <a href="#" class="link">Soy un enlace</a>
+
+    <button class="button">Soy un botón</button>
+
+    <div class="box">
+        <div class="box__item">ITEM 1</div>
+    </div>
+
+</body>
+</html>

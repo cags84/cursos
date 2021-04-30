@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Fundamentos</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Flexbox - Fundamentos -->
+    <h1>Flexbox - Fundamentos</h1>
+    
+    <p>Es un modelo de layout que permiten que las cajas sean flexible, de hay su nombre.</p>
+    <p>Existe <em>display:flex</em> y <em>display:inline-flex</em>, para que el contenedor sea bloque o línea respectivamente.</p>
+
+    <p>Se necesita un contenedor (contexto) <em>flex-container</em> y al menos un hijo <em>flex-item.</em></p>
+
+    <p>Las cajas flexibles son los items, el contenedor es el contexto al que pertenences los items.</p>
+
+    <p>Solo los hijos directos son los flexibles, si tuvireamos otros elementos dentro un un flex-item no aplica.</p>
+
+    <p>Un hijo podría ser flex-item y flex-container a la vez si es necesario, para que el elemento dentro del hijo pueda ser un flex-item y el flex-item a su vez flex-container.</p>
+
+    <p>Los ::after y los ::before de un elemento con flex, tambien se consideran flex-items.</p>
+
+    <p>El texto tambien se considera un hijo del contenedor, se comporta como una caja flexible, lo podemos controlar.</p>
+
+    <h2>Ejes</h2>
+    
+    <p>Existen dos ejes para colocar y alinear el contenido:</p>
+    
+    <p>Por defecto el eje principal es horizontal y de izquierda a derecha y el eje secundario es vertical de arriba abajo.</p>
+    
+    <p>Se pueden intercambiar los ejes y la dirección de ambos.</p>
+
+    <p>Estos ejes reciben un nombre:</p>
+    <ul>
+        <li>Eje principal: main axis (Eje horizontal)</li>
+        <li>Eje secundario: cross axis (Eje vertical)</li>
+    </ul>
+
+    <p>A parte se genera un inicio y un fin: </p>
+    <ul>
+        <li>Eje principal: main-start, main-end</li>
+        <li>Eje secundario: cross-start, cross-end</li>
+    </ul>
+
+    <hr>
+    <h2>Ejemplo</h2>
+    <hr>
+    
+</body>
+</html>

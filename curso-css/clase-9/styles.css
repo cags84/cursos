@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+@import 'assets/css/normalize-8.0.1.css';
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Fix [img] */
+img {max-width: 100%}
+
+/* ------------------------------------------------------------------ */
+
+.img-box {
+    width: 95%;
+    /* Tip para centrar un elemento de bloque que no ocupe todo el espacio, solo es posible aplicar con elementos en bloque. */
+    /* Formato shorthand */
+    /* margin: 2em auto; */
+    /* Formato especifico */
+    margin-top: 2em;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-left: auto;
+    /* Truco para posicionar el texto */
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Se presenta problemas con el colapso de margenes por eso se solapan las margenes top y bottom por lo cual no se aplica, hay que hacer trucos o utilizar simpre margin-bottom */
+
+img {
+    border: 5px solid lightcoral;
+    outline: 5px solid lightcoral;
+    outline-offset: -45px; /* Se separa 10px de la caja, pero no empuja al párrago hacia abajo */
+}
+
+.text {
+    position: absolute;
+    color: lightcoral;
+    font-size: 3em;
+}
